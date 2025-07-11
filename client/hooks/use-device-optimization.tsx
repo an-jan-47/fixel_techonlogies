@@ -171,6 +171,11 @@ export function usePerformanceConfig(): PerformanceConfig {
       enableHoverEffects: !capabilities.isMobile && !capabilities.isLowEnd,
       enableTransitions: !capabilities.reducedMotion,
       frameRateTarget: capabilities.isLowEnd ? 30 : 60,
+      // Device capabilities for convenience
+      isLowEnd: capabilities.isLowEnd,
+      isMobile: capabilities.isMobile,
+      reducedMotion: capabilities.reducedMotion,
+      connectionSpeed: capabilities.connectionSpeed,
     };
 
     // Additional optimizations for very low-end devices
