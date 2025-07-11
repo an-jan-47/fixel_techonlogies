@@ -115,7 +115,56 @@
     @apply border-border;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     @apply bg-background text-foreground;
+    font-family: "Inter", system-ui, sans-serif;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: hsl(var(--muted));
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: hsl(var(--fixel-blue));
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--fixel-purple));
+  }
+
+  /* Selection styles */
+  ::selection {
+    background: hsl(var(--fixel-blue) / 0.3);
+    color: hsl(var(--foreground));
+  }
+
+  /* Focus styles */
+  :focus-visible {
+    outline: 2px solid hsl(var(--fixel-blue));
+    outline-offset: 2px;
+  }
+}
+
+@layer utilities {
+  .text-gradient-blue-purple {
+    @apply bg-gradient-to-r from-fixel-blue to-fixel-purple bg-clip-text text-transparent;
+  }
+
+  .text-gradient-green-cyan {
+    @apply bg-gradient-to-r from-fixel-green to-fixel-cyan bg-clip-text text-transparent;
+  }
+
+  .text-gradient-orange-pink {
+    @apply bg-gradient-to-r from-fixel-orange to-fixel-pink bg-clip-text text-transparent;
   }
 }
