@@ -137,6 +137,12 @@ export default function Navigation() {
           : "bg-background/85 backdrop-blur-lg border-b border-border/30"
       }`}
       style={{
+        position: "fixed !important" as any,
+        top: "0 !important" as any,
+        left: "0 !important" as any,
+        right: "0 !important" as any,
+        zIndex: "9999 !important" as any,
+        transform: "translateY(0px) translateZ(0) !important" as any,
         willChange: "background-color, backdrop-filter",
         backdropFilter: isScrolled
           ? "blur(20px) saturate(180%)"
