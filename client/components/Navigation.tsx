@@ -105,14 +105,10 @@ export default function Navigation() {
   return (
     <nav
       ref={navRef}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 will-change-transform ${
+      className={`fixed top-0 left-0 right-0 z-50 translate-y-0 transition-all duration-300 will-change-auto ${
         isScrolled
           ? "bg-background/95 backdrop-blur-xl border-b border-border/50 shadow-lg shadow-fixel-blue/5"
-          : "bg-transparent"
-      } ${
-        scrollDirection === "up" || scrollY < 100
-          ? "translate-y-0"
-          : "-translate-y-full"
+          : "bg-background/50 backdrop-blur-md"
       }`}
       style={{
         willChange: isScrolled ? "background-color, backdrop-filter" : "auto",
