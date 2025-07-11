@@ -340,7 +340,7 @@ if (config.enableAnimations) {
 
 <AutoPerformanceOptimizer>
   <PerformanceDashboard />
-  {/* Your app content */}
+  <YourAppContent />
 </AutoPerformanceOptimizer>`}
                 </div>
               </div>
