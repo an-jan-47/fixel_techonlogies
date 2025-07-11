@@ -265,8 +265,8 @@ export default function Navigation() {
                   onClick={(e) => handleSmoothScroll(e, sectionId)}
                   className={`text-lg font-medium transition-all duration-300 p-3 rounded-lg hover:translate-x-2 gpu-accelerated ${
                     isActive
-                      ? "text-fixel-blue bg-fixel-blue/10"
-                      : "text-foreground/80 hover:text-fixel-blue hover:bg-fixel-blue/5"
+                      ? "text-fixel-blue bg-fixel-blue/15 backdrop-blur-sm border border-fixel-blue/20"
+                      : "text-foreground hover:text-fixel-blue hover:bg-background/60 hover:backdrop-blur-sm hover:border hover:border-fixel-blue/10 bg-background/40 backdrop-blur-sm border border-border/30"
                   }`}
                   style={{
                     willChange: "color, background-color, transform",
