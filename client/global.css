@@ -413,6 +413,32 @@
     -webkit-overflow-scrolling: touch;
   }
 
+  /* Navigation performance optimizations */
+  nav[class*="fixed"] {
+    contain: layout style;
+    will-change: background-color, backdrop-filter;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+  }
+
+  /* Prevent layout shifts during backdrop blur changes */
+  nav[class*="backdrop-blur"] {
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+  }
+
+  /* Smooth scroll behavior for anchor links */
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+  }
+
+  /* Optimize navigation link transitions */
+  nav a[href^="#"] {
+    will-change: color, background-color;
+    contain: layout style paint;
+  }
+
   /* High-performance backdrop blur */
   .backdrop-blur-performance {
     backdrop-filter: blur(12px);
