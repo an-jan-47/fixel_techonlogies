@@ -419,4 +419,96 @@
     -webkit-backdrop-filter: blur(12px);
     will-change: backdrop-filter;
   }
+
+  /* Low-end device optimizations */
+  .reduce-animations * {
+    animation-duration: 0.15s !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.15s !important;
+  }
+
+  .reduce-animations .animate-bounce-subtle,
+  .reduce-animations .animate-float,
+  .reduce-animations .animate-rotate-slow,
+  .reduce-animations .animate-pulse-slow {
+    animation: none !important;
+  }
+
+  .reduce-animations .text-gradient-blue-purple,
+  .reduce-animations .text-gradient-green-cyan,
+  .reduce-animations .text-gradient-orange-pink,
+  .reduce-animations .text-gradient-pink-orange {
+    background: linear-gradient(90deg, currentColor, currentColor) !important;
+    background-clip: unset !important;
+    -webkit-background-clip: unset !important;
+    will-change: auto !important;
+  }
+
+  /* Memory optimization classes */
+  .memory-efficient * {
+    will-change: auto;
+    contain: layout style paint;
+  }
+
+  .memory-efficient .hover-lift:hover,
+  .memory-efficient .hover-scale:hover,
+  .memory-efficient .hover-rotate:hover {
+    transform: none !important;
+  }
+
+  /* Battery saving mode */
+  .battery-save * {
+    animation: none !important;
+    transition: none !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  .battery-save .bg-gradient-radial {
+    background: var(--tw-gradient-from) !important;
+  }
+
+  /* Performance budget classes */
+  .performance-critical {
+    contain: strict;
+    will-change: auto;
+  }
+
+  .performance-critical * {
+    animation-duration: 0.1s !important;
+    transition-duration: 0.1s !important;
+  }
+
+  /* Reduced motion enhancements */
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+
+    .animate-bounce-subtle,
+    .animate-float,
+    .animate-rotate-slow,
+    .animate-pulse-slow,
+    .animate-glow,
+    .animate-shimmer {
+      animation: none !important;
+    }
+  }
+
+  /* Connection-aware optimizations */
+  @media (prefers-reduced-data: reduce) {
+    .backdrop-blur-performance {
+      backdrop-filter: none !important;
+      -webkit-backdrop-filter: none !important;
+    }
+
+    .bg-gradient-radial {
+      background: solid var(--tw-gradient-from) !important;
+    }
+  }
 }
