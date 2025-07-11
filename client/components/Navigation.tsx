@@ -78,31 +78,6 @@ export default function Navigation() {
             ))}
           </div>
 
-          {/* CTA Buttons */}
-          <div className="hidden lg:flex items-center space-x-3">
-            <Button
-              asChild
-              variant="ghost"
-              size="sm"
-              className="text-foreground/80 hover:text-fixel-blue hover:bg-fixel-blue/10"
-            >
-              <a
-                href="https://calendly.com/fixel-technologies/consultation"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Schedule Call
-              </a>
-            </Button>
-            <Button
-              asChild
-              size="sm"
-              className="bg-gradient-to-r from-fixel-blue to-fixel-purple hover:from-fixel-blue/80 hover:to-fixel-purple/80 text-white font-medium shadow-lg hover:shadow-fixel-blue/25 transition-all duration-300"
-            >
-              <Link to="/contact">Request Quote</Link>
-            </Button>
-          </div>
-
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
