@@ -93,42 +93,45 @@ export default {
             height: "0",
           },
         },
+        // Performance-optimized keyframes using transform3d
         "fade-in": {
           "0%": {
             opacity: "0",
-            transform: "translateY(20px)",
+            transform: "translate3d(0, 20px, 0)",
           },
           "100%": {
             opacity: "1",
-            transform: "translateY(0)",
+            transform: "translate3d(0, 0, 0)",
           },
         },
         "slide-in-left": {
           "0%": {
             opacity: "0",
-            transform: "translateX(-30px)",
+            transform: "translate3d(-30px, 0, 0)",
           },
           "100%": {
             opacity: "1",
-            transform: "translateX(0)",
+            transform: "translate3d(0, 0, 0)",
           },
         },
         "slide-in-right": {
           "0%": {
             opacity: "0",
-            transform: "translateX(30px)",
+            transform: "translate3d(30px, 0, 0)",
           },
           "100%": {
             opacity: "1",
-            transform: "translateX(0)",
+            transform: "translate3d(0, 0, 0)",
           },
         },
         "bounce-subtle": {
           "0%, 100%": {
-            transform: "translateY(0)",
+            transform: "translate3d(0, 0, 0)",
+            animationTimingFunction: "cubic-bezier(0.8, 0, 1, 1)",
           },
           "50%": {
-            transform: "translateY(-4px)",
+            transform: "translate3d(0, -4px, 0)",
+            animationTimingFunction: "cubic-bezier(0, 0, 0.2, 1)",
           },
         },
         glow: {
@@ -142,10 +145,12 @@ export default {
         },
         float: {
           "0%, 100%": {
-            transform: "translateY(0)",
+            transform: "translate3d(0, 0, 0)",
+            animationTimingFunction: "cubic-bezier(0.4, 0, 0.6, 1)",
           },
           "50%": {
-            transform: "translateY(-10px)",
+            transform: "translate3d(0, -8px, 0)",
+            animationTimingFunction: "cubic-bezier(0.4, 0, 0.6, 1)",
           },
         },
         "pulse-slow": {
@@ -153,25 +158,25 @@ export default {
             opacity: "1",
           },
           "50%": {
-            opacity: "0.5",
+            opacity: "0.6",
           },
         },
         "rotate-slow": {
           "0%": {
-            transform: "rotate(0deg)",
+            transform: "rotate3d(0, 0, 1, 0deg)",
           },
           "100%": {
-            transform: "rotate(360deg)",
+            transform: "rotate3d(0, 0, 1, 360deg)",
           },
         },
         "scale-in": {
           "0%": {
             opacity: "0",
-            transform: "scale(0.9)",
+            transform: "scale3d(0.95, 0.95, 1)",
           },
           "100%": {
             opacity: "1",
-            transform: "scale(1)",
+            transform: "scale3d(1, 1, 1)",
           },
         },
         shimmer: {
@@ -184,27 +189,166 @@ export default {
         },
         wiggle: {
           "0%, 100%": {
-            transform: "rotate(-3deg)",
+            transform: "rotate3d(0, 0, 1, -3deg)",
           },
           "50%": {
-            transform: "rotate(3deg)",
+            transform: "rotate3d(0, 0, 1, 3deg)",
+          },
+        },
+        // High-performance entrance animations
+        "slide-up": {
+          "0%": {
+            opacity: "0",
+            transform: "translate3d(0, 100%, 0)",
+          },
+          "100%": {
+            opacity: "1",
+            transform: "translate3d(0, 0, 0)",
+          },
+        },
+        "slide-down": {
+          "0%": {
+            opacity: "0",
+            transform: "translate3d(0, -100%, 0)",
+          },
+          "100%": {
+            opacity: "1",
+            transform: "translate3d(0, 0, 0)",
+          },
+        },
+        "zoom-in": {
+          "0%": {
+            opacity: "0",
+            transform: "scale3d(0.3, 0.3, 1)",
+          },
+          "100%": {
+            opacity: "1",
+            transform: "scale3d(1, 1, 1)",
+          },
+        },
+        "flip-in": {
+          "0%": {
+            opacity: "0",
+            transform: "perspective(400px) rotate3d(1, 0, 0, 90deg)",
+          },
+          "40%": {
+            transform: "perspective(400px) rotate3d(1, 0, 0, -20deg)",
+          },
+          "60%": {
+            transform: "perspective(400px) rotate3d(1, 0, 0, 10deg)",
+          },
+          "80%": {
+            transform: "perspective(400px) rotate3d(1, 0, 0, -5deg)",
+          },
+          "100%": {
+            opacity: "1",
+            transform: "perspective(400px) rotate3d(1, 0, 0, 0deg)",
+          },
+        },
+        // Performance-optimized loading animations
+        "loading-dots": {
+          "0%, 80%, 100%": {
+            transform: "scale3d(0, 0, 1)",
+            opacity: "0.5",
+          },
+          "40%": {
+            transform: "scale3d(1, 1, 1)",
+            opacity: "1",
+          },
+        },
+        "loading-bars": {
+          "0%, 40%, 100%": {
+            transform: "scaleY(0.4)",
+          },
+          "20%": {
+            transform: "scaleY(1)",
+          },
+        },
+        // Smooth gradient animations
+        "gradient-x": {
+          "0%, 100%": {
+            backgroundPosition: "0% 50%",
+          },
+          "50%": {
+            backgroundPosition: "100% 50%",
+          },
+        },
+        "gradient-y": {
+          "0%, 100%": {
+            backgroundPosition: "50% 0%",
+          },
+          "50%": {
+            backgroundPosition: "50% 100%",
+          },
+        },
+        "gradient-xy": {
+          "0%, 100%": {
+            backgroundPosition: "0% 0%",
+          },
+          "25%": {
+            backgroundPosition: "100% 0%",
+          },
+          "50%": {
+            backgroundPosition: "100% 100%",
+          },
+          "75%": {
+            backgroundPosition: "0% 100%",
           },
         },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        "fade-in": "fade-in 0.8s ease-out forwards",
-        "slide-in-left": "slide-in-left 0.8s ease-out forwards",
-        "slide-in-right": "slide-in-right 0.8s ease-out forwards",
-        "bounce-subtle": "bounce-subtle 3s ease-in-out infinite",
-        glow: "glow 3s ease-in-out infinite",
-        float: "float 6s ease-in-out infinite",
-        "pulse-slow": "pulse-slow 4s ease-in-out infinite",
-        "rotate-slow": "rotate-slow 20s linear infinite",
-        "scale-in": "scale-in 0.5s ease-out forwards",
-        shimmer: "shimmer 2s linear infinite",
+        // High-performance entrance animations
+        "fade-in": "fade-in 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards",
+        "slide-in-left":
+          "slide-in-left 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards",
+        "slide-in-right":
+          "slide-in-right 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards",
+        "slide-up": "slide-up 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards",
+        "slide-down": "slide-down 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards",
+        "zoom-in": "zoom-in 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards",
+        "flip-in": "flip-in 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards",
+        "scale-in": "scale-in 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards",
+        // Smooth continuous animations
+        "bounce-subtle":
+          "bounce-subtle 2s cubic-bezier(0.4, 0, 0.6, 1) infinite",
+        glow: "glow 2s cubic-bezier(0.4, 0, 0.6, 1) infinite",
+        float: "float 4s cubic-bezier(0.4, 0, 0.6, 1) infinite",
+        "pulse-slow": "pulse-slow 3s cubic-bezier(0.4, 0, 0.6, 1) infinite",
+        "rotate-slow": "rotate-slow 15s linear infinite",
+        shimmer: "shimmer 1.5s linear infinite",
         wiggle: "wiggle 1s ease-in-out infinite",
+        // Loading animations
+        "loading-dots": "loading-dots 1.4s infinite ease-in-out both",
+        "loading-bars": "loading-bars 1s infinite ease-in-out both",
+        // Gradient animations
+        "gradient-x": "gradient-x 3s ease infinite",
+        "gradient-y": "gradient-y 3s ease infinite",
+        "gradient-xy": "gradient-xy 6s ease infinite",
+      },
+      // Enhanced easing functions for smoother animations
+      transitionTimingFunction: {
+        "out-expo": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "out-back": "cubic-bezier(0.34, 1.56, 0.64, 1)",
+        "in-expo": "cubic-bezier(0.95, 0.05, 0.795, 0.035)",
+        "in-out-expo": "cubic-bezier(0.87, 0, 0.13, 1)",
+        spring: "cubic-bezier(0.175, 0.885, 0.32, 1.275)",
+        smooth: "cubic-bezier(0.4, 0, 0.2, 1)",
+        "smooth-in": "cubic-bezier(0.4, 0, 1, 1)",
+        "smooth-out": "cubic-bezier(0, 0, 0.2, 1)",
+      },
+      // Optimized transition durations
+      transitionDuration: {
+        "50": "50ms",
+        "75": "75ms",
+        "250": "250ms",
+        "350": "350ms",
+        "400": "400ms",
+        "600": "600ms",
+        "800": "800ms",
+        "1200": "1200ms",
+        "1500": "1500ms",
       },
     },
   },
