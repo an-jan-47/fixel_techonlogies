@@ -236,13 +236,15 @@ export default function Navigation() {
 
       {/* Mobile Menu */}
       <div
-        className={`lg:hidden absolute top-full left-0 right-0 bg-background/98 backdrop-blur-xl border-b border-border transition-all duration-500 overflow-hidden ${
+        className={`lg:hidden absolute top-full left-0 right-0 bg-background/95 backdrop-blur-3xl border-b border-border shadow-2xl shadow-black/20 transition-all duration-500 overflow-hidden ${
           isOpen
             ? "opacity-100 translate-y-0 max-h-screen"
             : "opacity-0 -translate-y-4 max-h-0 pointer-events-none"
         }`}
         style={{
           willChange: isOpen ? "opacity, transform, max-height" : "auto",
+          backdropFilter: "blur(24px) saturate(180%)",
+          WebkitBackdropFilter: "blur(24px) saturate(180%)",
         }}
       >
         <div className="container mx-auto px-4 py-6">
