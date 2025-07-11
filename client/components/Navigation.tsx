@@ -4,12 +4,12 @@ import { Button } from "@/components/ui/button";
 import { Menu, X, Code, Smartphone, Palette, Zap } from "lucide-react";
 
 const navigationItems = [
-  { name: "Home", path: "/" },
-  { name: "Services", path: "/services" },
-  { name: "About", path: "/about" },
-  { name: "Portfolio", path: "/portfolio" },
-  { name: "Reviews", path: "/reviews" },
-  { name: "Contact", path: "/contact" },
+  { name: "Home", path: "#home" },
+  { name: "Services", path: "#services" },
+  { name: "About", path: "#about" },
+  { name: "Portfolio", path: "#portfolio" },
+  { name: "Reviews", path: "#reviews" },
+  { name: "Contact", path: "#contact" },
 ];
 
 export default function Navigation() {
