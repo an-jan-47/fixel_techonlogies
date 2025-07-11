@@ -35,30 +35,42 @@ export default function Navigation() {
     sectionObservers.current.forEach((observer) => observer.disconnect());
     sectionObservers.current.clear();
 
+    // Use a single observer for better performance
+    const observer = new IntersectionObserver(
+      (entries) => {
+        let mostVisibleSection = "";
+        let maxRatio = 0;
+
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && entry.intersectionRatio > maxRatio) {
+            maxRatio = entry.intersectionRatio;
+            mostVisibleSection = entry.target.id;
+          }
+        });
+
+        if (mostVisibleSection && maxRatio > 0.3) {
+          setActiveSection(mostVisibleSection);
+        }
+      },
+      {
+        rootMargin: "-10% 0px -70% 0px",
+        threshold: [0.1, 0.3, 0.5],
+      },
+    );
+
     sections.forEach((sectionId) => {
       const element = document.getElementById(sectionId);
       if (element) {
-        const observer = new IntersectionObserver(
-          (entries) => {
-            entries.forEach((entry) => {
-              if (entry.isIntersecting && entry.intersectionRatio >= 0.5) {
-                setActiveSection(sectionId);
-              }
-            });
-          },
-          {
-            rootMargin: "-20% 0px -60% 0px",
-            threshold: [0.3, 0.5, 0.7],
-          },
-        );
-
         observer.observe(element);
-        sectionObservers.current.set(sectionId, observer);
       }
     });
 
+    // Store observer reference
+    sectionObservers.current.set("main", observer);
+
     return () => {
-      sectionObservers.current.forEach((observer) => observer.disconnect());
+      observer.disconnect();
+      sectionObservers.current.clear();
     };
   }, []);
 
