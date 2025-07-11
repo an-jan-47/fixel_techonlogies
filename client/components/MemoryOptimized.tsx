@@ -195,13 +195,13 @@ export const MemoryAwareSection: React.FC<{
 };
 
 // Optimized component factory for lazy loading
-export function createOptimizedComponent<P extends Record<string, any> = {}>(
+export function createOptimizedComponent<P = {}>(
   importFunc: () => Promise<{ default: React.ComponentType<P> }>,
   fallback?: React.ReactNode,
 ): React.ComponentType<P> {
   const LazyComponent = lazy(importFunc);
 
-  return React.memo<P>((props: P) => {
+  return React.memo((props: P) => {
     const config = usePerformanceConfig();
 
     return (
@@ -212,10 +212,10 @@ export function createOptimizedComponent<P extends Record<string, any> = {}>(
           )
         }
       >
-        <LazyComponent {...props} />
+        <LazyComponent {...(props as any)} />
       </Suspense>
     );
-  });
+  }) as React.ComponentType<P>;
 }
 
 // Resource pool for managing expensive operations
