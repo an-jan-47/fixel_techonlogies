@@ -419,6 +419,12 @@
     will-change: background-color, backdrop-filter;
     transform: translateZ(0);
     backface-visibility: hidden;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    z-index: 9999 !important;
+    transform: translateY(0px) translateZ(0) !important;
   }
 
   /* Prevent layout shifts during backdrop blur changes */
