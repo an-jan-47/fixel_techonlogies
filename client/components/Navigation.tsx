@@ -88,18 +88,14 @@ export default function Navigation() {
           <div className="container mx-auto px-4 py-6">
             <div className="flex flex-col space-y-4">
               {navigationItems.map((item) => (
-                <Link
+                <a
                   key={item.path}
-                  to={item.path}
+                  href={item.path}
                   onClick={() => setIsOpen(false)}
-                  className={`text-lg font-medium transition-colors duration-200 hover:text-fixel-blue ${
-                    location.pathname === item.path
-                      ? "text-fixel-blue"
-                      : "text-foreground/80"
-                  }`}
+                  className="text-lg font-medium transition-colors duration-200 hover:text-fixel-blue text-foreground/80"
                 >
                   {item.name}
-                </Link>
+                </a>
               ))}
             </div>
           </div>
