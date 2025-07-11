@@ -197,14 +197,14 @@ const projects = [
     image: "/placeholder.svg",
     technologies: ["React Native", "Firebase", "Node.js", "MongoDB"],
     results: {
-      metric1: { value: 50, label: "Downloads", suffix: "k+" },
+      metric1: { value: 50, label: "Downloads", suffix: "k+", decimals: 0 },
       metric2: {
         value: 4.8,
         label: "App Store Rating",
         suffix: "★",
         decimals: 1,
       },
-      metric3: { value: 85, label: "User Retention", suffix: "%" },
+      metric3: { value: 85, label: "User Retention", suffix: "%", decimals: 0 },
     },
     timeline: "6 Months",
     year: "2024",
