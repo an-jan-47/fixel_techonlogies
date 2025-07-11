@@ -32,7 +32,7 @@ const AnimatedCounter = memo(function AnimatedCounter({
 
   return (
     <span
-      ref={elementRef}
+      ref={elementRef as React.RefObject<HTMLSpanElement>}
       className={`gpu-accelerated ${className}`}
       style={{
         willChange: hasAnimated ? "auto" : "contents",
