@@ -61,20 +61,13 @@ export default function Navigation() {
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
             {navigationItems.map((item) => (
-              <Link
+              <a
                 key={item.path}
-                to={item.path}
-                className={`relative text-sm font-medium transition-colors duration-200 hover:text-fixel-blue ${
-                  location.pathname === item.path
-                    ? "text-fixel-blue"
-                    : "text-foreground/80"
-                }`}
+                href={item.path}
+                className="relative text-sm font-medium transition-colors duration-200 hover:text-fixel-blue text-foreground/80"
               >
                 {item.name}
-                {location.pathname === item.path && (
-                  <div className="absolute -bottom-1 left-0 right-0 h-0.5 bg-gradient-to-r from-fixel-blue to-fixel-purple rounded-full"></div>
-                )}
-              </Link>
+              </a>
             ))}
           </div>
 
