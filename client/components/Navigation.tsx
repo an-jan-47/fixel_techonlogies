@@ -62,17 +62,31 @@ export default function Navigation() {
     };
   }, []);
 
-  // Optimized smooth scroll with RAF
+  // Optimized smooth scroll with immediate response
   const handleSmoothScroll = useCallback(
     (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
       e.preventDefault();
+
+      // Close mobile menu immediately for better UX
+      setIsOpen(false);
+
+      // Use native smooth scroll for better performance
       const target = document.getElementById(targetId);
       if (target) {
         const offset = 80; // Account for fixed header
         const targetPosition = target.offsetTop - offset;
-        smoothScrollTo(targetPosition, 800);
+
+        // Use native smooth scroll with fallback
+        if ("scrollBehavior" in document.documentElement.style) {
+          window.scrollTo({
+            top: targetPosition,
+            behavior: "smooth",
+          });
+        } else {
+          // Fallback for older browsers
+          smoothScrollTo(targetPosition, 600);
+        }
       }
-      setIsOpen(false);
     },
     [],
   );
