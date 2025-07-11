@@ -1,4 +1,8 @@
-import { useCounterAnimation } from "@/hooks/use-counter-animation";
+import { memo } from "react";
+import {
+  useCounterAnimation,
+  formatCounterNumber,
+} from "@/hooks/use-counter-animation";
 
 interface AnimatedCounterProps {
   end: number;
@@ -10,7 +14,7 @@ interface AnimatedCounterProps {
   className?: string;
 }
 
-export function AnimatedCounter({
+const AnimatedCounter = memo(function AnimatedCounter({
   end,
   duration = 2000,
   start = 0,
@@ -19,28 +23,27 @@ export function AnimatedCounter({
   suffix = "",
   className = "",
 }: AnimatedCounterProps) {
-  const { count, elementRef } = useCounterAnimation({
+  const { count, elementRef, hasAnimated } = useCounterAnimation({
     end,
     duration,
     start,
     decimals,
   });
 
-  const formatNumber = (num: number) => {
-    if (suffix === "%" || suffix === "★" || suffix === "/5") {
-      return num.toFixed(decimals);
-    }
-    if (suffix === "+" && num >= 1000) {
-      return (num / 1000).toFixed(1) + "k";
-    }
-    return num.toFixed(decimals);
-  };
-
   return (
-    <div ref={elementRef} className={className}>
+    <span
+      ref={elementRef}
+      className={`gpu-accelerated ${className}`}
+      style={{
+        willChange: hasAnimated ? "auto" : "contents",
+        contain: "layout style",
+      }}
+    >
       {prefix}
-      {formatNumber(count)}
+      {formatCounterNumber(count, decimals, suffix)}
       {suffix}
-    </div>
+    </span>
   );
-}
+});
+
+export { AnimatedCounter };
