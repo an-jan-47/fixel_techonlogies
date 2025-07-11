@@ -1,4 +1,8 @@
 import { useState, useEffect, useCallback, useRef } from "react";
+import {
+  usePerformanceConfig,
+  useMemoryMonitor,
+} from "./use-device-optimization";
 
 // Optimized scroll hook with RAF and throttling
 export function useOptimizedScroll() {
@@ -8,6 +12,8 @@ export function useOptimizedScroll() {
   const rafId = useRef<number>();
   const lastScrollY = useRef(0);
   const scrollTimeout = useRef<NodeJS.Timeout>();
+  const config = usePerformanceConfig();
+  const { isHighMemoryUsage } = useMemoryMonitor();
 
   const updateScroll = useCallback(() => {
     const currentScrollY = window.scrollY;
@@ -28,13 +34,19 @@ export function useOptimizedScroll() {
       clearTimeout(scrollTimeout.current);
     }
 
-    // Set scrolling to false after 150ms of no scrolling
+    // Set scrolling to false after adaptive delay
+    const scrollDelay = config.isLowEnd || isHighMemoryUsage ? 300 : 150;
     scrollTimeout.current = setTimeout(() => {
       setIsScrolling(false);
-    }, 150);
+    }, scrollDelay);
   }, []);
 
   const handleScroll = useCallback(() => {
+    // Skip updates if memory usage is too high
+    if (isHighMemoryUsage && config.isLowEnd) {
+      return;
+    }
+
     // Cancel previous RAF
     if (rafId.current) {
       cancelAnimationFrame(rafId.current);
@@ -42,7 +54,7 @@ export function useOptimizedScroll() {
 
     // Schedule update for next frame
     rafId.current = requestAnimationFrame(updateScroll);
-  }, [updateScroll]);
+  }, [updateScroll, isHighMemoryUsage, config.isLowEnd]);
 
   useEffect(() => {
     // Passive listener for better performance
@@ -74,6 +86,7 @@ export function useOptimizedIntersection(
   const [hasIntersected, setHasIntersected] = useState(false);
   const elementRef = useRef<Element>(null);
   const observerRef = useRef<IntersectionObserver>();
+  const config = usePerformanceConfig();
 
   useEffect(() => {
     const element = elementRef.current;
@@ -90,8 +103,8 @@ export function useOptimizedIntersection(
         });
       },
       {
-        rootMargin: "50px 0px",
-        threshold: 0.1,
+        rootMargin: config.isLowEnd ? "20px 0px" : "50px 0px",
+        threshold: config.isLowEnd ? 0.2 : 0.1,
         ...options,
       },
     );
