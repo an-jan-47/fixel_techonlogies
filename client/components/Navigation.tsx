@@ -108,30 +108,6 @@ export default function Navigation() {
                   {item.name}
                 </Link>
               ))}
-              <div className="flex flex-col space-y-3 pt-4 border-t border-border">
-                <Button
-                  asChild
-                  variant="ghost"
-                  className="justify-start text-foreground/80 hover:text-fixel-blue hover:bg-fixel-blue/10"
-                >
-                  <a
-                    href="https://calendly.com/fixel-technologies/consultation"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    onClick={() => setIsOpen(false)}
-                  >
-                    Schedule Call
-                  </a>
-                </Button>
-                <Button
-                  asChild
-                  className="justify-start bg-gradient-to-r from-fixel-blue to-fixel-purple hover:from-fixel-blue/80 hover:to-fixel-purple/80 text-white font-medium"
-                >
-                  <Link to="/contact" onClick={() => setIsOpen(false)}>
-                    Request Quote
-                  </Link>
-                </Button>
-              </div>
             </div>
           </div>
         </div>
