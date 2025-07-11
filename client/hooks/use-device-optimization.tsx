@@ -155,6 +155,10 @@ export function usePerformanceConfig(): PerformanceConfig {
     enableHoverEffects: true,
     enableTransitions: true,
     frameRateTarget: 60,
+    isLowEnd: false,
+    isMobile: false,
+    reducedMotion: false,
+    connectionSpeed: "fast",
   });
 
   useEffect(() => {
