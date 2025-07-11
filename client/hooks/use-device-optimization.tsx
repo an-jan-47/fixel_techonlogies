@@ -25,6 +25,11 @@ export interface PerformanceConfig {
   enableHoverEffects: boolean;
   enableTransitions: boolean;
   frameRateTarget: number;
+  // Device capabilities for convenience
+  isLowEnd: boolean;
+  isMobile: boolean;
+  reducedMotion: boolean;
+  connectionSpeed: "slow" | "medium" | "fast";
 }
 
 // Device detection hook
