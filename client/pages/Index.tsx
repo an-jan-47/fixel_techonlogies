@@ -176,8 +176,13 @@ const projects = [
     image: "/placeholder.svg",
     technologies: ["React", "Node.js", "PostgreSQL", "Stripe", "AWS"],
     results: {
-      metric1: { value: 300, label: "Increase in Sales", suffix: "%" },
-      metric2: { value: 15, label: "Active Users", suffix: "k+" },
+      metric1: {
+        value: 300,
+        label: "Increase in Sales",
+        suffix: "%",
+        decimals: 0,
+      },
+      metric2: { value: 15, label: "Active Users", suffix: "k+", decimals: 0 },
       metric3: { value: 99.9, label: "Uptime", suffix: "%", decimals: 1 },
     },
     timeline: "4 Months",
