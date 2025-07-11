@@ -24,7 +24,7 @@ export default function Navigation() {
   const navRef = useRef<HTMLElement>(null);
 
   // Use optimized scroll hook
-  const { scrollY, scrollDirection } = useOptimizedScroll();
+  const { scrollY } = useOptimizedScroll();
   const isScrolled = scrollY > 20;
 
   // Optimize active section detection with intersection observers
