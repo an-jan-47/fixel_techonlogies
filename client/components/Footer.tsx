@@ -52,75 +52,15 @@ export default function Footer() {
                 scales with your ambitions.
               </p>
             </div>
-
-            {/* Social Links */}
-            <div className="flex justify-center space-x-4 mb-8 animate-fade-in delay-500">
-              {[
-                {
-                  icon: <Github className="w-5 h-5" />,
-                  color: "hover:bg-gray-100 dark:hover:bg-gray-800",
-                },
-                {
-                  icon: <Twitter className="w-5 h-5" />,
-                  color: "hover:bg-blue-100 dark:hover:bg-blue-900",
-                },
-                {
-                  icon: <Linkedin className="w-5 h-5" />,
-                  color: "hover:bg-blue-100 dark:hover:bg-blue-900",
-                },
-                {
-                  icon: <Mail className="w-5 h-5" />,
-                  color: "hover:bg-red-100 dark:hover:bg-red-900",
-                },
-              ].map((social, index) => (
-                <Button
-                  key={index}
-                  variant="ghost"
-                  size="icon"
-                  className={`hover:text-fixel-blue transition-all duration-300 hover:scale-110 hover:rotate-6 ${social.color}`}
-                  style={{ animationDelay: `${600 + index * 100}ms` }}
-                >
-                  {social.icon}
-                </Button>
-              ))}
+            </div>
             </div>
 
-            {/* Contact CTAs */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-bounce-subtle delay-700">
-              <Button
-                asChild
-                size="lg"
-                className="bg-green-600 hover:bg-green-700 text-white font-medium shadow-lg hover:shadow-green-600/25 transition-all duration-300 hover:scale-105"
-              >
-                <a
-                  href="https://wa.me/1234567890?text=Hi%20Fixel%20Technologies,%20I%27d%20like%20to%20discuss%20a%20project."
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <MessageCircle className="w-5 h-5 mr-2" />
-                  WhatsApp
-                </a>
-              </Button>
-              <Button
-                asChild
-                variant="outline"
-                size="lg"
-                className="border-fixel-blue text-fixel-blue hover:bg-fixel-blue hover:text-white font-medium hover:scale-105 transition-all duration-300"
-              >
-                <a href="#contact">
-                  Schedule Call
-                  <ArrowRight className="w-5 h-5 ml-2" />
-                </a>
-              </Button>
-            </div>
-          </div>
-        </div>
 
         {/* Bottom Section */}
         <div className="py-6 border-t border-border animate-fade-in delay-1000">
           <div className="text-center">
             <div className="text-sm text-muted-foreground">
-              © 2024 Fixel Technologies. All rights reserved.
+              © 2025 Fixel Technologies. All rights reserved.
             </div>
           </div>
         </div>

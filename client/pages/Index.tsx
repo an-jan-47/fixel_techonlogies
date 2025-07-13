@@ -70,10 +70,9 @@ const services = [
     color: "fixel-blue",
     features: [
       "React, Vue, Angular applications",
-      "Node.js, Python, PHP backends",
+      "Node.js, Supabase",
       "Progressive Web Apps (PWA)",
       "E-commerce platforms",
-      "Custom CMS solutions",
       "API development & integration",
     ],
     price: 5000,
@@ -87,11 +86,10 @@ const services = [
     color: "fixel-purple",
     features: [
       "React Native development",
-      "Native iOS (Swift) & Android (Kotlin)",
+      "Native iOS & Android",
       "Flutter applications",
       "App Store optimization",
       "Push notifications",
-      "Offline functionality",
     ],
     price: 8000,
     popular: true,
@@ -133,34 +131,34 @@ const services = [
 ];
 
 const stats = [
-  { number: 150, label: "Projects Delivered", suffix: "+", icon: <Rocket /> },
-  { number: 50, label: "Happy Clients", suffix: "+", icon: <Users /> },
-  { number: 99, label: "Success Rate", suffix: "%", icon: <Target /> },
+  { number: 10, label: "Projects Delivered", suffix: "+", icon: <Rocket /> },
+  { number: 8, label: "Happy Clients", suffix: "+", icon: <Users /> },
+  { number: 99.99, label: "Success Rate", suffix: "%", icon: <Target /> },
   { number: 24, label: "Support", suffix: "/7", icon: <Clock /> },
 ];
 
 const testimonials = [
   {
     id: 1,
-    name: "Sarah Johnson",
+    name: "HARSH",
     role: "CEO",
-    company: "GreenLife Co.",
+    company: "GroceryHub.",
     avatar: "/placeholder.svg",
     rating: 5,
-    text: "Fixel Technologies transformed our entire e-commerce platform. The team's expertise in sustainable tech solutions and their attention to detail exceeded our expectations. Our sales increased by 300% within the first quarter!",
-    project: "EcoCommerce Platform",
+    text: "Fixel Technologies transformed our entire e-commerce platform. The team's expertise in sustainable tech solutions and their attention to detail exceeded our expectations.",
+    project: "E-Commerce Platform",
     category: "E-commerce",
     featured: true,
   },
   {
     id: 2,
-    name: "Michael Chen",
+    name: "SHRIKANT",
     role: "CTO",
-    company: "WellnessTech",
+    company: "MedikaIndica",
     avatar: "/placeholder.svg",
     rating: 5,
-    text: "The mobile app they developed for us has been a game-changer. The seamless integration with wearable devices and the intuitive UI design has made our users incredibly happy. 50k+ downloads in just 3 months!",
-    project: "HealthTrack Mobile App",
+    text: "The mobile app they developed for us has been a game-changer. The seamless integration of delivery services and the intuitive UI design has made our users incredibly happy.",
+    project: "Health Mobile App",
     category: "Mobile Development",
     featured: true,
   },
@@ -181,45 +179,45 @@ const testimonials = [
 const projects = [
   {
     id: 1,
-    title: "EcoCommerce Platform",
-    client: "GreenLife Co.",
+    title: "E-Commerce Platform",
+    client: "GroceryHub",
     description:
       "A full-featured e-commerce platform for sustainable products with AI-powered recommendations.",
     image: "/placeholder.svg",
-    technologies: ["React", "Node.js", "PostgreSQL", "Stripe", "AWS"],
+    technologies: ["React", "Node.js", "Supabase", "Razorpay"],
     results: {
       metric1: {
-        value: 300,
+        value: 70,
         label: "Increase in Sales",
         suffix: "%",
         decimals: 0,
       },
-      metric2: { value: 15, label: "Active Users", suffix: "k+", decimals: 0 },
+      metric2: { value: 10, label: "Active Users", suffix: "k+", decimals: 0 },
       metric3: { value: 99.9, label: "Uptime", suffix: "%", decimals: 1 },
     },
-    timeline: "4 Months",
+    timeline: "2 Months",
     year: "2024",
   },
   {
     id: 2,
-    title: "HealthTrack Mobile App",
-    client: "WellnessTech",
+    title: "Health Mobile App",
+    client: "MedikaIndica",
     description:
-      "Cross-platform mobile app for health monitoring with wearable integration.",
+      "Cross-platform mobile app for medicine delivery under 30 minutes",
     image: "/placeholder.svg",
-    technologies: ["React Native", "Firebase", "Node.js", "MongoDB"],
+    technologies: ["React Native", "Firebase", "Node.js", "Supabase"],
     results: {
-      metric1: { value: 50, label: "Downloads", suffix: "k+", decimals: 0 },
+      metric1: { value: 5, label: "Downloads", suffix: "k+", decimals: 0 },
       metric2: {
         value: 4.8,
-        label: "App Store Rating",
+        label: "Playstore Store Rating",
         suffix: "★",
         decimals: 1,
       },
       metric3: { value: 85, label: "User Retention", suffix: "%", decimals: 0 },
     },
     timeline: "6 Months",
-    year: "2024",
+    year: "2025",
   },
 ];
 
@@ -561,7 +559,7 @@ export default function Index() {
               <span className="bg-gradient-to-r from-fixel-blue to-fixel-purple bg-clip-text text-transparent">
                 Excellence
               </span>{" "}
-              Since 2019
+              Since 2024
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed animate-slide-in-right delay-300">
               We're a passionate team of developers, designers, and innovators
