@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import Layout from "@/components/Layout";
 import ScrollProgress from "@/components/ScrollProgress";
 import ScrollToTop from "@/components/ScrollToTop";
@@ -70,9 +70,10 @@ const services = [
     color: "fixel-blue",
     features: [
       "React, Vue, Angular applications",
-      "Node.js, Supabase",
+      "Node.js, Python, PHP backends",
       "Progressive Web Apps (PWA)",
       "E-commerce platforms",
+      "Custom CMS solutions",
       "API development & integration",
     ],
     price: 5000,
@@ -86,10 +87,11 @@ const services = [
     color: "fixel-purple",
     features: [
       "React Native development",
-      "Native iOS & Android",
+      "Native iOS (Swift) & Android (Kotlin)",
       "Flutter applications",
       "App Store optimization",
       "Push notifications",
+      "Offline functionality",
     ],
     price: 8000,
     popular: true,
@@ -145,7 +147,7 @@ const testimonials = [
     company: "GroceryHub",
     avatar: "",
     rating: 5,
-    text: "Fixel Technologies transformed our entire e-commerce platform for wholesale grocery products. Their AI-powered recommendations and attention to detail exceeded our expectations. Our sales increased by 300% within the first quarter!",
+    text: "Fixel Technologies transformed our entire e-commerce platform for wholesale grocery products. Their AI-powered recommendations and attention to detail exceeded our expectations. Our sales increased by 70% within the first quarter!",
     project: "E commerce Platform",
     category: "E-commerce",
     featured: true,
@@ -181,20 +183,19 @@ const projects = [
     client: "GroceryHub",
     description:
       "A full-featured e-commerce platform for wholesale grocery products with AI-powered recommendations.",
-    image:
-      "https://cdn.builder.io/api/v1/image/assets%2F44b23d3b90f744f2b1903fefd63b4fe7%2F1423cc67d3c9493f8adcfc15377e70c4?format=webp&width=800",
+    image: "",
     technologies: ["React", "Node.js", "PostgreSQL", "Stripe", "AWS"],
     results: {
       metric1: {
-        value: 70,
+        value: 300,
         label: "Increase in Sales",
         suffix: "%",
         decimals: 0,
       },
-      metric2: { value: 10, label: "Active Users", suffix: "k+", decimals: 0 },
+      metric2: { value: 15, label: "Active Users", suffix: "k+", decimals: 0 },
       metric3: { value: 99.9, label: "Uptime", suffix: "%", decimals: 1 },
     },
-    timeline: "2 Months",
+    timeline: "4 Months",
     year: "2024",
   },
   {
@@ -203,21 +204,20 @@ const projects = [
     client: "Medika Indica",
     description:
       "Cross-platform mobile app for medicine delivery in 30 minutes.",
-    image:
-      "https://cdn.builder.io/api/v1/image/assets%2F44b23d3b90f744f2b1903fefd63b4fe7%2Ff85fe39c8a464f8b80473b01628ea062?format=webp&width=800",
+    image: "",
     technologies: ["React Native", "Firebase", "Node.js", "MongoDB"],
     results: {
       metric1: { value: 5, label: "Downloads", suffix: "k", decimals: 0 },
       metric2: {
         value: 4.8,
-        label: "Playstore Store Rating",
+        label: "App Store Rating",
         suffix: "★",
         decimals: 1,
       },
       metric3: { value: 85, label: "User Retention", suffix: "%", decimals: 0 },
     },
     timeline: "6 Months",
-    year: "2025",
+    year: "2024",
   },
 ];
 
@@ -260,6 +260,7 @@ export default function Index() {
     email: "",
     company: "",
     phone: "",
+    service: "",
     budget: "",
     timeline: "",
     message: "",
@@ -273,48 +274,6 @@ export default function Index() {
 
   useEffect(() => {
     setMounted(true);
-
-    // Initialize Calendly widget
-    const initCalendly = () => {
-      const container = document.querySelector(".calendly-inline-widget");
-      if ((window as any).Calendly && container) {
-        // Clear the container first
-        container.innerHTML = "";
-
-        (window as any).Calendly.initInlineWidget({
-          url: "https://calendly.com/technologiesfixel/30min",
-          parentElement: container,
-          prefill: {},
-          utm: {},
-        });
-      }
-    };
-
-    // Load Calendly script
-    const script = document.createElement("script");
-    script.src = "https://assets.calendly.com/assets/external/widget.js";
-    script.async = true;
-    script.onload = () => {
-      // Wait a bit for the script to fully load
-      setTimeout(initCalendly, 500);
-    };
-
-    // Check if script already exists
-    const existingScript = document.querySelector('script[src*="calendly"]');
-    if (existingScript) {
-      // Script already loaded, just initialize
-      setTimeout(initCalendly, 100);
-    } else {
-      document.head.appendChild(script);
-    }
-
-    return () => {
-      // Cleanup on unmount
-      const container = document.querySelector(".calendly-inline-widget");
-      if (container) {
-        container.innerHTML = "";
-      }
-    };
   }, []);
 
   const nextTestimonial = () => {
@@ -363,6 +322,7 @@ export default function Index() {
           email: "",
           company: "",
           phone: "",
+          service: "",
           budget: "",
           timeline: "",
           message: "",
@@ -675,12 +635,10 @@ export default function Index() {
                 className="group hover:shadow-2xl hover:shadow-fixel-blue/10 transition-all duration-500 border-border/50 hover:border-fixel-blue/30 overflow-hidden hover:scale-105 animate-fade-in backdrop-blur-sm bg-gradient-to-br from-card/80 to-background/80"
                 style={{ animationDelay: `${500 + index * 300}ms` }}
               >
-                <div className="relative h-64 bg-gradient-to-br from-fixel-blue/10 to-fixel-purple/10 overflow-hidden">
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                  />
+                <div className="aspect-video bg-gradient-to-br from-fixel-blue/10 to-fixel-purple/10 flex items-center justify-center relative overflow-hidden">
+                  <div className="text-6xl text-fixel-blue/30 group-hover:scale-125 group-hover:rotate-12 transition-all duration-500">
+                    <Globe />
+                  </div>
                   <div className="absolute inset-0 bg-gradient-to-r from-transparent via-fixel-blue/5 to-transparent group-hover:translate-x-full transition-transform duration-1000"></div>
 
                   {/* Tech stack badges */}
@@ -913,58 +871,51 @@ export default function Index() {
           </div>
 
           {/* Enhanced Calendly Integration */}
-          <div className="max-w-4xl mx-auto mb-16 animate-fade-in delay-500 px-4 sm:px-6">
-            <Card className="p-4 sm:p-6 lg:p-8 shadow-lg bg-gradient-to-br from-card to-background">
-              <CardHeader className="text-center px-0 sm:px-6">
-                <CardTitle className="text-xl sm:text-2xl font-bold mb-4 flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-3">
-                  <Calendar className="w-6 h-6 text-fixel-blue flex-shrink-0" />
-                  <span className="text-center">
-                    Schedule a{" "}
-                    <span className="text-gradient-blue-purple">
-                      Free Consultation
-                    </span>
+          <div className="max-w-4xl mx-auto mb-16 animate-fade-in delay-500">
+            <Card className="p-8 hover:shadow-2xl hover:shadow-fixel-blue/10 transition-all duration-500 hover:scale-105 backdrop-blur-sm bg-gradient-to-br from-card/80 to-background/80">
+              <CardHeader className="text-center">
+                <CardTitle className="text-2xl font-bold mb-4 flex items-center justify-center">
+                  <Calendar className="w-6 h-6 mr-3 text-fixel-blue" />
+                  Schedule a{" "}
+                  <span className="text-gradient-blue-purple ml-2">
+                    Free Consultation
                   </span>
                 </CardTitle>
-                <p className="text-sm sm:text-base text-muted-foreground px-2 sm:px-0">
+                <p className="text-muted-foreground">
                   Book a 30-minute call with our team to discuss your project
                   requirements and get a personalized solution.
                 </p>
               </CardHeader>
-              <CardContent className="px-0 sm:px-6">
-                <div className="bg-white rounded-lg border overflow-hidden">
-                  <div
-                    className="calendly-inline-widget w-full h-[500px] sm:h-[600px]"
-                    data-url="https://calendly.com/technologiesfixel/30min"
-                    style={{
-                      minWidth: "300px",
-                      width: "100%",
-                    }}
-                  ></div>
-                  <div className="p-4 sm:p-6">
+              <CardContent>
+                <div className="aspect-video bg-gradient-to-br from-fixel-blue/5 to-fixel-purple/5 rounded-lg flex items-center justify-center border-2 border-dashed border-fixel-blue/20 hover:border-fixel-blue/40 transition-colors duration-300 relative overflow-hidden">
+                  <div className="text-center animate-bounce-subtle z-10">
+                    <Calendar className="w-16 h-16 text-fixel-blue mx-auto mb-4" />
+                    <p className="text-muted-foreground mb-4">
+                      Calendly widget will be embedded here
+                    </p>
                     <Button
                       asChild
-                      className="w-full sm:w-auto bg-gradient-to-r from-fixel-blue to-fixel-purple hover:from-fixel-blue/80 hover:to-fixel-purple/80 text-white font-semibold hover:scale-105 transition-all duration-300"
+                      className="bg-gradient-to-r from-fixel-blue to-fixel-purple hover:from-fixel-blue/80 hover:to-fixel-purple/80 text-white font-semibold hover:scale-105 transition-all duration-300"
                     >
                       <a
-                        href="https://calendly.com/technologiesfixel/30min"
+                        href="https://calendly.com/fixel-technologies/consultation"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center justify-center gap-2"
                       >
-                        <Calendar className="w-4 h-4 sm:w-5 sm:h-5" />
+                        <Calendar className="w-5 h-5 mr-2" />
                         Open Calendly
-                        <ExternalLink className="w-3 h-3 sm:w-4 sm:h-4" />
+                        <ExternalLink className="w-4 h-4 ml-2" />
                       </a>
                     </Button>
                   </div>
-                </div>
 
-                {/* Floating calendar icons */}
-                <div className="absolute top-4 left-4 w-8 h-8 bg-fixel-blue/10 rounded-full flex items-center justify-center animate-float">
-                  <Calendar className="w-4 h-4 text-fixel-blue" />
-                </div>
-                <div className="absolute bottom-4 right-4 w-6 h-6 bg-fixel-purple/10 rounded-full flex items-center justify-center animate-float delay-1000">
-                  <Clock className="w-3 h-3 text-fixel-purple" />
+                  {/* Floating calendar icons */}
+                  <div className="absolute top-4 left-4 w-8 h-8 bg-fixel-blue/10 rounded-full flex items-center justify-center animate-float">
+                    <Calendar className="w-4 h-4 text-fixel-blue" />
+                  </div>
+                  <div className="absolute bottom-4 right-4 w-6 h-6 bg-fixel-purple/10 rounded-full flex items-center justify-center animate-float delay-1000">
+                    <Clock className="w-3 h-3 text-fixel-purple" />
+                  </div>
                 </div>
               </CardContent>
             </Card>
@@ -1030,6 +981,35 @@ export default function Index() {
                   />
                 </div>
 
+                <div className="group">
+                  <label className="text-sm font-medium group-hover:text-fixel-blue transition-colors duration-300">
+                    Service Needed <span className="text-red-500">*</span>
+                  </label>
+                  <Select
+                    value={formData.service}
+                    onValueChange={(value) =>
+                      handleInputChange("service", value)
+                    }
+                    required
+                  >
+                    <SelectTrigger className="mt-2 hover:border-fixel-blue/50 focus:border-fixel-blue transition-colors duration-300">
+                      <SelectValue placeholder="" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      {services.map((service) => (
+                        <SelectItem key={service.title} value={service.title}>
+                          <div className="flex items-center space-x-2">
+                            <div className={`text-${service.color}`}>
+                              {service.icon}
+                            </div>
+                            <span>{service.title}</span>
+                          </div>
+                        </SelectItem>
+                      ))}
+                    </SelectContent>
+                  </Select>
+                </div>
+
                 <FormField
                   label="Project Description"
                   id="message"
@@ -1085,6 +1065,33 @@ export default function Index() {
                   building something amazing together.
                 </p>
               </div>
+
+              <Card className="p-6 hover:shadow-lg hover:scale-105 transition-all duration-300 hover:border-fixel-blue/30 backdrop-blur-sm bg-gradient-to-br from-card/80 to-background/80">
+                <h4 className="font-bold text-lg mb-4 flex items-center">
+                  <Building className="w-5 h-5 mr-2 text-fixel-blue" />
+                  San Francisco HQ
+                </h4>
+                <div className="space-y-3">
+                  <div className="flex items-center space-x-3 group hover:translate-x-2 transition-transform duration-300">
+                    <MapPin className="w-5 h-5 text-fixel-blue group-hover:scale-125 transition-transform duration-300" />
+                    <span className="text-muted-foreground group-hover:text-foreground transition-colors duration-300">
+                      123 Tech Street, San Francisco, CA 94105
+                    </span>
+                  </div>
+                  <div className="flex items-center space-x-3 group hover:translate-x-2 transition-transform duration-300">
+                    <Phone className="w-5 h-5 text-fixel-green group-hover:scale-125 transition-transform duration-300" />
+                    <span className="text-muted-foreground group-hover:text-foreground transition-colors duration-300">
+                      +1 (555) 123-4567
+                    </span>
+                  </div>
+                  <div className="flex items-center space-x-3 group hover:translate-x-2 transition-transform duration-300">
+                    <Clock className="w-5 h-5 text-fixel-orange group-hover:scale-125 transition-transform duration-300" />
+                    <span className="text-muted-foreground group-hover:text-foreground transition-colors duration-300">
+                      Mon-Fri: 9 AM - 6 PM PST
+                    </span>
+                  </div>
+                </div>
+              </Card>
 
               <Card className="p-6 bg-gradient-to-br from-fixel-blue/5 to-fixel-purple/5 hover:shadow-lg hover:scale-105 transition-all duration-300 backdrop-blur-sm">
                 <h4 className="font-bold text-lg mb-4 flex items-center">
