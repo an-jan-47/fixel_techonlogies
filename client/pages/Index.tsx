@@ -187,7 +187,7 @@ const projects = [
     technologies: ["React", "Node.js", "PostgreSQL", "Stripe", "AWS"],
     results: {
       metric1: {
-        value: 300,
+        value: 70,
         label: "Increase in Sales",
         suffix: "%",
         decimals: 0,
