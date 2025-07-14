@@ -1,13 +1,4 @@
-import { Button } from "@/components/ui/button";
-import {
-  Code,
-  Github,
-  Twitter,
-  Linkedin,
-  Mail,
-  MessageCircle,
-  ArrowRight,
-} from "lucide-react";
+import { Code } from "lucide-react";
 
 export default function Footer() {
   return (
