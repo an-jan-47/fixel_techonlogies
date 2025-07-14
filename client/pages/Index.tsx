@@ -508,14 +508,6 @@ export default function Index() {
                   <p className="text-muted-foreground mb-6">
                     {service.description}
                   </p>
-                  <div className="text-2xl font-bold text-fixel-blue mb-6 group-hover:scale-110 transition-transform duration-300">
-                    Starting at{" "}
-                    <AnimatedCounter
-                      end={service.price}
-                      prefix="$"
-                      duration={1500}
-                    />
-                  </div>
                 </CardHeader>
                 <CardContent className="relative z-10">
                   <ul className="space-y-3 mb-6">
