@@ -979,7 +979,7 @@ export default function Index() {
                     id="company"
                     value={formData.company}
                     onChange={(value) => handleInputChange("company", value)}
-                    placeholder="Your Company Inc."
+                    placeholder=""
                   />
                   <FormField
                     label="Phone Number"
