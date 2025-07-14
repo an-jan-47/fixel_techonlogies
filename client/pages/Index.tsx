@@ -999,7 +999,10 @@ export default function Index() {
                     }
                     required
                   >
-                    <SelectTrigger className="mt-2 hover:border-fixel-blue/50 focus:border-fixel-blue transition-colors duration-300">
+                    <SelectTrigger
+                      className="mt-2 hover:border-fixel-blue/50 focus:border-fixel-blue transition-colors duration-300"
+                      onClick={(e) => e.stopPropagation()}
+                    >
                       <SelectValue placeholder="" />
                     </SelectTrigger>
                     <SelectContent
