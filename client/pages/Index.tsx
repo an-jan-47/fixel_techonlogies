@@ -177,7 +177,6 @@ const testimonials = [
 const projects = [
   {
     id: 1,
-<<<<<<< HEAD
     title: "E commerce Platform",
     client: "GroceryHub",
     description:
@@ -185,14 +184,6 @@ const projects = [
     image:
       "https://cdn.builder.io/api/v1/image/assets%2F44b23d3b90f744f2b1903fefd63b4fe7%2F1423cc67d3c9493f8adcfc15377e70c4?format=webp&width=800",
     technologies: ["React", "Node.js", "PostgreSQL", "Stripe", "AWS"],
-=======
-    title: "E-Commerce Platform",
-    client: "GroceryHub",
-    description:
-      "A full-featured e-commerce platform for sustainable products with AI-powered recommendations.",
-    image: "/placeholder.svg",
-    technologies: ["React", "Node.js", "Supabase", "Razorpay"],
->>>>>>> 24d8d6e5783157d8e33bbcc4cc7d0f34682a90e9
     results: {
       metric1: {
         value: 70,
