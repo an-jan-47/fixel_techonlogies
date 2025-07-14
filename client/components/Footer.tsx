@@ -53,38 +53,6 @@ export default function Footer() {
               </p>
             </div>
 
-            {/* Social Links */}
-            <div className="flex justify-center space-x-4 mb-8 animate-fade-in delay-500">
-              {[
-                {
-                  icon: <Github className="w-5 h-5" />,
-                  color: "hover:bg-gray-100 dark:hover:bg-gray-800",
-                },
-                {
-                  icon: <Twitter className="w-5 h-5" />,
-                  color: "hover:bg-blue-100 dark:hover:bg-blue-900",
-                },
-                {
-                  icon: <Linkedin className="w-5 h-5" />,
-                  color: "hover:bg-blue-100 dark:hover:bg-blue-900",
-                },
-                {
-                  icon: <Mail className="w-5 h-5" />,
-                  color: "hover:bg-red-100 dark:hover:bg-red-900",
-                },
-              ].map((social, index) => (
-                <Button
-                  key={index}
-                  variant="ghost"
-                  size="icon"
-                  className={`hover:text-fixel-blue transition-all duration-300 hover:scale-110 hover:rotate-6 ${social.color}`}
-                  style={{ animationDelay: `${600 + index * 100}ms` }}
-                >
-                  {social.icon}
-                </Button>
-              ))}
-            </div>
-
             {/* Contact CTAs */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-bounce-subtle delay-700">
               <Button
