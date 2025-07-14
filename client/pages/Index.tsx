@@ -132,13 +132,8 @@ const services = [
 
 const stats = [
   { number: 10, label: "Projects Delivered", suffix: "+", icon: <Rocket /> },
-<<<<<<< HEAD
   { number: 6, label: "Happy Clients", suffix: "+", icon: <Users /> },
   { number: 100, label: "Success Rate", suffix: "%", icon: <Target /> },
-=======
-  { number: 8, label: "Happy Clients", suffix: "+", icon: <Users /> },
-  { number: 99.99, label: "Success Rate", suffix: "%", icon: <Target /> },
->>>>>>> 24d8d6e5783157d8e33bbcc4cc7d0f34682a90e9
   { number: 24, label: "Support", suffix: "/7", icon: <Clock /> },
 ];
 
