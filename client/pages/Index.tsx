@@ -1002,7 +1002,11 @@ export default function Index() {
                     <SelectTrigger className="mt-2 hover:border-fixel-blue/50 focus:border-fixel-blue transition-colors duration-300">
                       <SelectValue placeholder="" />
                     </SelectTrigger>
-                    <SelectContent>
+                    <SelectContent
+                      className="z-50"
+                      position="popper"
+                      sideOffset={4}
+                    >
                       {services.map((service) => (
                         <SelectItem key={service.title} value={service.title}>
                           <div className="flex items-center space-x-2">
