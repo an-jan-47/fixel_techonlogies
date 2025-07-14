@@ -933,7 +933,7 @@ export default function Index() {
                   </div>
                   <div className="absolute bottom-4 right-4 w-6 h-6 bg-fixel-purple/10 rounded-full flex items-center justify-center animate-float delay-1000">
                     <Clock className="w-3 h-3 text-fixel-purple" />
-                  </div>
+                                    </div>
                 </div>
               </CardContent>
             </Card>
