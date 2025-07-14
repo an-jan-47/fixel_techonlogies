@@ -1149,39 +1149,6 @@ export default function Index() {
                   ))}
                 </div>
               </Card>
-
-              {/* Quick contact options */}
-              <div className="space-y-4">
-                <h4 className="font-semibold text-lg flex items-center">
-                  <Sparkles className="w-5 h-5 mr-2 text-fixel-cyan" />
-                  Quick Connect
-                </h4>
-                <div className="grid grid-cols-2 gap-4">
-                  <Button
-                    asChild
-                    className="bg-green-600 hover:bg-green-700 text-white font-medium hover:scale-105 transition-all duration-300"
-                  >
-                    <a
-                      href="https://wa.me/1234567890?text=Hi%20Fixel%20Technologies,%20I%27d%20like%20to%20discuss%20a%20project."
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <MessageCircle className="w-4 h-4 mr-2" />
-                      WhatsApp
-                    </a>
-                  </Button>
-                  <Button
-                    asChild
-                    variant="outline"
-                    className="border-fixel-blue text-fixel-blue hover:bg-fixel-blue hover:text-white font-medium hover:scale-105 transition-all duration-300"
-                  >
-                    <a href="mailto:hello@fixeltechnologies.com">
-                      <Mail className="w-4 h-4 mr-2" />
-                      Email
-                    </a>
-                  </Button>
-                </div>
-              </div>
             </div>
           </div>
         </div>
