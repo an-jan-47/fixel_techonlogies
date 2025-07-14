@@ -1120,7 +1120,7 @@ export default function Index() {
                     },
                     {
                       icon: <Shield className="w-5 h-5" />,
-                      text: "99% project success rate",
+                      text: "100% project success rate",
                       color: "fixel-green",
                     },
                     {
