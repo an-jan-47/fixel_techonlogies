@@ -907,10 +907,9 @@ export default function Index() {
                                                 <div className="bg-white rounded-lg border overflow-hidden">
                   
                                                             <div
-                      id="calendly-widget"
-                      className="calendly-inline-widget"
+                                            className="calendly-inline-widget"
                       data-url="https://calendly.com/technologiesfixel/30min"
-                      style={{ minWidth: '320px', height: '630px' }}
+                      style={{ minWidth: '320px', height: '700px', width: '100%' }}
                     ></div>
                     <Button
                       asChild
