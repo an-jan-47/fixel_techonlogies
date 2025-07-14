@@ -192,7 +192,7 @@ const projects = [
         suffix: "%",
         decimals: 0,
       },
-      metric2: { value: 15, label: "Active Users", suffix: "k+", decimals: 0 },
+      metric2: { value: 7, label: "Active Users", suffix: "k+", decimals: 0 },
       metric3: { value: 99.9, label: "Uptime", suffix: "%", decimals: 1 },
     },
     timeline: "4 Months",
