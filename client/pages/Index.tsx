@@ -894,7 +894,7 @@ export default function Index() {
 
           {/* Enhanced Calendly Integration */}
           <div className="max-w-4xl mx-auto mb-16 animate-fade-in delay-500">
-            <Card className="p-8 hover:shadow-2xl hover:shadow-fixel-blue/10 transition-all duration-500 hover:scale-105 backdrop-blur-sm bg-gradient-to-br from-card/80 to-background/80">
+            <Card className="p-8 shadow-lg bg-gradient-to-br from-card to-background">
               <CardHeader className="text-center">
                 <CardTitle className="text-2xl font-bold mb-4 flex items-center justify-center">
                   <Calendar className="w-6 h-6 mr-3 text-fixel-blue" />
