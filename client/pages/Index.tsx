@@ -199,7 +199,6 @@ const projects = [
   },
   {
     id: 2,
-<<<<<<< HEAD
     title: "Medika Indica Mobile App",
     client: "Medika Indica",
     description:
@@ -209,16 +208,6 @@ const projects = [
     technologies: ["React Native", "Firebase", "Node.js", "MongoDB"],
     results: {
       metric1: { value: 5, label: "Downloads", suffix: "k", decimals: 0 },
-=======
-    title: "Health Mobile App",
-    client: "MedikaIndica",
-    description:
-      "Cross-platform mobile app for medicine delivery under 30 minutes",
-    image: "/placeholder.svg",
-    technologies: ["React Native", "Firebase", "Node.js", "Supabase"],
-    results: {
-      metric1: { value: 5, label: "Downloads", suffix: "k+", decimals: 0 },
->>>>>>> 24d8d6e5783157d8e33bbcc4cc7d0f34682a90e9
       metric2: {
         value: 4.8,
         label: "Playstore Store Rating",
