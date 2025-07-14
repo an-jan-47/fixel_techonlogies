@@ -283,8 +283,8 @@ export default function Index() {
     script.async = true;
     script.onload = () => {
       // Force re-render of Calendly widgets after script loads
-      if (window.Calendly) {
-        window.Calendly.initInlineWidget({
+            if ((window as any).Calendly) {
+        (window as any).Calendly.initInlineWidget({
           url: 'https://calendly.com/technologiesfixel/30min',
           parentElement: document.querySelector('.calendly-inline-widget')
         });
