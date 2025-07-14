@@ -213,7 +213,7 @@ const projects = [
       metric2: {
         value: 4.8,
         label: "App Store Rating",
-        suffix: "★",
+        suffix: "���",
         decimals: 1,
       },
       metric3: { value: 85, label: "User Retention", suffix: "%", decimals: 0 },
@@ -262,7 +262,6 @@ export default function Index() {
     email: "",
     company: "",
     phone: "",
-    service: "",
     budget: "",
     timeline: "",
     message: "",
