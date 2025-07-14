@@ -891,15 +891,11 @@ export default function Index() {
                   <div className="text-center animate-bounce-subtle z-10">
                     <Calendar className="w-16 h-16 text-fixel-blue mx-auto mb-4" />
                     <div
+                      id="calendly-widget"
                       className="calendly-inline-widget"
                       data-url="https://calendly.com/technologiesfixel/30min"
                       style={{ minWidth: "320px", height: "630px" }}
                     ></div>
-                    <script
-                      type="text/javascript"
-                      src="https://assets.calendly.com/assets/external/widget.js"
-                      async
-                    ></script>
                     <Button
                       asChild
                       className="bg-gradient-to-r from-fixel-blue to-fixel-purple hover:from-fixel-blue/80 hover:to-fixel-purple/80 text-white font-semibold hover:scale-105 transition-all duration-300"
