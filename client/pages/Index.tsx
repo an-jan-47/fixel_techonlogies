@@ -915,7 +915,7 @@ export default function Index() {
               <CardContent>
                 <div className="bg-white rounded-lg border overflow-hidden">
                   
-                                                            <div
+                  <div
                                                                 className="calendly-inline-widget"
                     data-url="https://calendly.com/technologiesfixel/30min"
                     style={{ minWidth: '320px', height: '700px', width: '100%' }}
