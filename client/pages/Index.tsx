@@ -277,12 +277,28 @@ export default function Index() {
   useEffect(() => {
     setMounted(true);
 
+    // Clean up any existing Calendly widgets
+    const existingWidgets = document.querySelectorAll("[data-calendly-widget]");
+    existingWidgets.forEach((widget) => widget.remove());
+
     // Load Calendly script only if not already loaded
     if (!document.querySelector('script[src*="calendly"]')) {
       const script = document.createElement("script");
       script.src = "https://assets.calendly.com/assets/external/widget.js";
       script.async = true;
       script.onload = () => {
+        // Clean up any auto-generated widgets
+        setTimeout(() => {
+          const autoWidgets = document.querySelectorAll(
+            "[data-calendly-widget]",
+          );
+          autoWidgets.forEach((widget) => {
+            if (!widget.closest(".calendly-inline-widget")) {
+              widget.remove();
+            }
+          });
+        }, 100);
+
         // Initialize widget only in our specific container
         const container = document.querySelector(".calendly-inline-widget");
         if ((window as any).Calendly && container) {
