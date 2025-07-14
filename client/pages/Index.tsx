@@ -924,7 +924,7 @@ export default function Index() {
                       asChild
                       className="bg-gradient-to-r from-fixel-blue to-fixel-purple hover:from-fixel-blue/80 hover:to-fixel-purple/80 text-white font-semibold hover:scale-105 transition-all duration-300"
                     >
-                                            <a
+                      <a
                         href="https://calendly.com/technologiesfixel/30min"
                         target="_blank"
                         rel="noopener noreferrer"
