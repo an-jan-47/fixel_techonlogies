@@ -929,35 +929,38 @@ export default function Index() {
                 </p>
               </CardHeader>
               <CardContent>
-                <div className="aspect-video bg-gradient-to-br from-fixel-blue/5 to-fixel-purple/5 rounded-lg flex items-center justify-center border-2 border-dashed border-fixel-blue/20 hover:border-fixel-blue/40 transition-colors duration-300 relative overflow-hidden">
-                  <div className="text-center animate-bounce-subtle z-10">
-                    <Calendar className="w-16 h-16 text-fixel-blue mx-auto mb-4" />
-                    <p className="text-muted-foreground mb-4">
-                      Calendly widget will be embedded here
-                    </p>
-                    <Button
-                      asChild
-                      className="bg-gradient-to-r from-fixel-blue to-fixel-purple hover:from-fixel-blue/80 hover:to-fixel-purple/80 text-white font-semibold hover:scale-105 transition-all duration-300"
+                <div className="bg-white rounded-lg border overflow-hidden">
+                  <div
+                    className="calendly-inline-widget w-full"
+                    data-url="https://calendly.com/technologiesfixel/30min"
+                    style={{
+                      minWidth: "320px",
+                      height: "600px",
+                      width: "100%",
+                    }}
+                  ></div>
+                  <Button
+                    asChild
+                    className="bg-gradient-to-r from-fixel-blue to-fixel-purple hover:from-fixel-blue/80 hover:to-fixel-purple/80 text-white font-semibold hover:scale-105 transition-all duration-300"
+                  >
+                    <a
+                      href="https://calendly.com/technologiesfixel/30min"
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
-                      <a
-                        href="https://calendly.com/technologiesfixel/30min"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <Calendar className="w-5 h-5 mr-2" />
-                        Open Calendly
-                        <ExternalLink className="w-4 h-4 ml-2" />
-                      </a>
-                    </Button>
-                  </div>
+                      <Calendar className="w-5 h-5 mr-2" />
+                      Open Calendly
+                      <ExternalLink className="w-4 h-4 ml-2" />
+                    </a>
+                  </Button>
+                </div>
 
-                  {/* Floating calendar icons */}
-                  <div className="absolute top-4 left-4 w-8 h-8 bg-fixel-blue/10 rounded-full flex items-center justify-center animate-float">
-                    <Calendar className="w-4 h-4 text-fixel-blue" />
-                  </div>
-                  <div className="absolute bottom-4 right-4 w-6 h-6 bg-fixel-purple/10 rounded-full flex items-center justify-center animate-float delay-1000">
-                    <Clock className="w-3 h-3 text-fixel-purple" />
-                  </div>
+                {/* Floating calendar icons */}
+                <div className="absolute top-4 left-4 w-8 h-8 bg-fixel-blue/10 rounded-full flex items-center justify-center animate-float">
+                  <Calendar className="w-4 h-4 text-fixel-blue" />
+                </div>
+                <div className="absolute bottom-4 right-4 w-6 h-6 bg-fixel-purple/10 rounded-full flex items-center justify-center animate-float delay-1000">
+                  <Clock className="w-3 h-3 text-fixel-purple" />
                 </div>
               </CardContent>
             </Card>
