@@ -277,39 +277,47 @@ export default function Index() {
   useEffect(() => {
     setMounted(true);
 
-    // Clean up any existing Calendly widgets
-    const existingWidgets = document.querySelectorAll("[data-calendly-widget]");
-    existingWidgets.forEach((widget) => widget.remove());
+    // Initialize Calendly widget
+    const initCalendly = () => {
+      const container = document.querySelector(".calendly-inline-widget");
+      if ((window as any).Calendly && container) {
+        // Clear the container first
+        container.innerHTML = "";
 
-    // Load Calendly script only if not already loaded
-    if (!document.querySelector('script[src*="calendly"]')) {
-      const script = document.createElement("script");
-      script.src = "https://assets.calendly.com/assets/external/widget.js";
-      script.async = true;
-      script.onload = () => {
-        // Clean up any auto-generated widgets
-        setTimeout(() => {
-          const autoWidgets = document.querySelectorAll(
-            "[data-calendly-widget]",
-          );
-          autoWidgets.forEach((widget) => {
-            if (!widget.closest(".calendly-inline-widget")) {
-              widget.remove();
-            }
-          });
-        }, 100);
+        (window as any).Calendly.initInlineWidget({
+          url: "https://calendly.com/technologiesfixel/30min",
+          parentElement: container,
+          prefill: {},
+          utm: {},
+        });
+      }
+    };
 
-        // Initialize widget only in our specific container
-        const container = document.querySelector(".calendly-inline-widget");
-        if ((window as any).Calendly && container) {
-          (window as any).Calendly.initInlineWidget({
-            url: "https://calendly.com/technologiesfixel/30min",
-            parentElement: container,
-          });
-        }
-      };
+    // Load Calendly script
+    const script = document.createElement("script");
+    script.src = "https://assets.calendly.com/assets/external/widget.js";
+    script.async = true;
+    script.onload = () => {
+      // Wait a bit for the script to fully load
+      setTimeout(initCalendly, 500);
+    };
+
+    // Check if script already exists
+    const existingScript = document.querySelector('script[src*="calendly"]');
+    if (existingScript) {
+      // Script already loaded, just initialize
+      setTimeout(initCalendly, 100);
+    } else {
       document.head.appendChild(script);
     }
+
+    return () => {
+      // Cleanup on unmount
+      const container = document.querySelector(".calendly-inline-widget");
+      if (container) {
+        container.innerHTML = "";
+      }
+    };
   }, []);
 
   const nextTestimonial = () => {
