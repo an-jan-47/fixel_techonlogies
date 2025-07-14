@@ -152,7 +152,6 @@ const testimonials = [
   },
   {
     id: 2,
-<<<<<<< HEAD
     name: "Shrikant",
     role: "CTO",
     company: "Medika Indica",
@@ -160,15 +159,6 @@ const testimonials = [
     rating: 5,
     text: "The mobile app they developed for us revolutionized medicine delivery. The 30-minute delivery system and intuitive UI design has made our users incredibly happy. 5k downloads and growing rapidly!",
     project: "Medika Indica Mobile App",
-=======
-    name: "SHRIKANT",
-    role: "CTO",
-    company: "MedikaIndica",
-    avatar: "/placeholder.svg",
-    rating: 5,
-    text: "The mobile app they developed for us has been a game-changer. The seamless integration of delivery services and the intuitive UI design has made our users incredibly happy.",
-    project: "Health Mobile App",
->>>>>>> 24d8d6e5783157d8e33bbcc4cc7d0f34682a90e9
     category: "Mobile Development",
     featured: true,
   },
