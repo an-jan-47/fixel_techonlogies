@@ -1026,35 +1026,6 @@ export default function Index() {
                   />
                 </div>
 
-                <div className="group">
-                  <label className="text-sm font-medium group-hover:text-fixel-blue transition-colors duration-300">
-                    Service Needed <span className="text-red-500">*</span>
-                  </label>
-                  <Select
-                    value={formData.service}
-                    onValueChange={(value) =>
-                      handleInputChange("service", value)
-                    }
-                    required
-                  >
-                    <SelectTrigger className="mt-2 hover:border-fixel-blue/50 focus:border-fixel-blue transition-colors duration-300">
-                      <SelectValue placeholder="" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      {services.map((service) => (
-                        <SelectItem key={service.title} value={service.title}>
-                          <div className="flex items-center space-x-2">
-                            <div className={`text-${service.color}`}>
-                              {service.icon}
-                            </div>
-                            <span>{service.title}</span>
-                          </div>
-                        </SelectItem>
-                      ))}
-                    </SelectContent>
-                  </Select>
-                </div>
-
                 <FormField
                   label="Project Description"
                   id="message"
