@@ -15,22 +15,12 @@ export default function Footer() {
           <div className="text-center max-w-2xl mx-auto">
             {/* Brand Section */}
             <div className="mb-8 animate-fade-in">
-              <div className="flex items-center justify-center space-x-3 mb-6 group">
-                <div className="relative">
-                  <div className="w-16 h-16 bg-gradient-to-br from-fixel-blue to-fixel-purple rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                    <Code className="w-8 h-8 text-white" />
-                  </div>
-                  <div className="absolute -top-1 -right-1 w-5 h-5 bg-fixel-cyan rounded-full animate-pulse"></div>
-                  <div className="absolute inset-0 bg-gradient-to-br from-fixel-blue to-fixel-purple rounded-xl blur-xl opacity-20 group-hover:opacity-40 transition-opacity duration-300"></div>
-                </div>
-                <div>
-                  <div className="text-3xl font-bold bg-gradient-to-r from-fixel-blue to-fixel-purple bg-clip-text text-transparent">
-                    Fixel
-                  </div>
-                  <div className="text-sm text-muted-foreground -mt-1">
-                    Technologies
-                  </div>
-                </div>
+              <div className="flex items-center justify-center mb-6 group">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets%2F44b23d3b90f744f2b1903fefd63b4fe7%2Fee993aad4b50489fb072653b8f0afd25?format=webp&width=800"
+                  alt="Fixel Technologies"
+                  className="h-16 w-auto group-hover:scale-110 transition-transform duration-300"
+                />
               </div>
 
               <p className="text-lg text-muted-foreground mb-4 leading-relaxed animate-slide-in-left delay-200">
