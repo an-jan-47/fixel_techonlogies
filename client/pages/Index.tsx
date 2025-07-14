@@ -274,6 +274,19 @@ export default function Index() {
 
   useEffect(() => {
     setMounted(true);
+
+    // Load Calendly script
+    const script = document.createElement("script");
+    script.src = "https://assets.calendly.com/assets/external/widget.js";
+    script.async = true;
+    document.head.appendChild(script);
+
+    return () => {
+      // Cleanup script on unmount
+      if (document.head.contains(script)) {
+        document.head.removeChild(script);
+      }
+    };
   }, []);
 
   const nextTestimonial = () => {
