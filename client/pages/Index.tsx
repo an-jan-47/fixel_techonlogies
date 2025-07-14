@@ -433,7 +433,7 @@ export default function Index() {
               <span className="text-fixel-blue font-semibold bg-fixel-blue/10 px-2 py-1 rounded-lg">
                 Fixel Technologies
               </span>{" "}
-              ��� a cutting-edge tech company delivering digital transformation
+              — a cutting-edge tech company delivering digital transformation
               for startups, agencies, and enterprise clients worldwide.
             </p>
 
@@ -659,10 +659,12 @@ export default function Index() {
                 className="group hover:shadow-2xl hover:shadow-fixel-blue/10 transition-all duration-500 border-border/50 hover:border-fixel-blue/30 overflow-hidden hover:scale-105 animate-fade-in backdrop-blur-sm bg-gradient-to-br from-card/80 to-background/80"
                 style={{ animationDelay: `${500 + index * 300}ms` }}
               >
-                <div className=" bg-gradient-to-br from-fixel-blue/10 to-fixel-purple/10 flex items-center justify-center relative overflow-hidden">
-                  <div className="text-6xl text-fixel-blue/30 group-hover:scale-125 group-hover:rotate-12 transition-all duration-500">
-                    <Globe />
-                  </div>
+                <div className="relative h-64 bg-gradient-to-br from-fixel-blue/10 to-fixel-purple/10 overflow-hidden">
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
                   <div className="absolute inset-0 bg-gradient-to-r from-transparent via-fixel-blue/5 to-transparent group-hover:translate-x-full transition-transform duration-1000"></div>
 
                   {/* Tech stack badges */}
