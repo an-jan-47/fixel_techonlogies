@@ -140,7 +140,6 @@ const stats = [
 const testimonials = [
   {
     id: 1,
-<<<<<<< HEAD
     name: "Harsh",
     role: "CEO",
     company: "GroceryHub",
@@ -148,15 +147,6 @@ const testimonials = [
     rating: 5,
     text: "Fixel Technologies transformed our entire e-commerce platform for wholesale grocery products. Their AI-powered recommendations and attention to detail exceeded our expectations. Our sales increased by 300% within the first quarter!",
     project: "E commerce Platform",
-=======
-    name: "HARSH",
-    role: "CEO",
-    company: "GroceryHub.",
-    avatar: "/placeholder.svg",
-    rating: 5,
-    text: "Fixel Technologies transformed our entire e-commerce platform. The team's expertise in sustainable tech solutions and their attention to detail exceeded our expectations.",
-    project: "E-Commerce Platform",
->>>>>>> 24d8d6e5783157d8e33bbcc4cc7d0f34682a90e9
     category: "E-commerce",
     featured: true,
   },
