@@ -987,7 +987,7 @@ export default function Index() {
                     type="tel"
                     value={formData.phone}
                     onChange={(value) => handleInputChange("phone", value)}
-                    placeholder="+1 (555) 123-4567"
+                    placeholder=""
                     validation={validationRules.phone}
                   />
                 </div>
