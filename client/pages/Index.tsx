@@ -522,8 +522,16 @@ export default function Index() {
                       </li>
                     ))}
                   </ul>
-                  <Button className="w-full bg-gradient-to-r from-fixel-blue to-fixel-purple hover:from-fixel-blue/80 hover:to-fixel-purple/80 text-white group/btn hover:scale-105 transition-all duration-300">
-                    Get Started
+                  <Button
+                    className="w-full bg-gradient-to-r from-fixel-blue to-fixel-purple hover:from-fixel-blue/80 hover:to-fixel-purple/80 text-white group/btn hover:scale-105 transition-all duration-300"
+                    onClick={() => {
+                      const contactSection = document.getElementById("contact");
+                      if (contactSection) {
+                        contactSection.scrollIntoView({ behavior: "smooth" });
+                      }
+                    }}
+                  >
+                    Schedule Free Consultation
                     <ArrowRight className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform" />
                   </Button>
                 </CardContent>
