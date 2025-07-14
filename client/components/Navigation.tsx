@@ -161,19 +161,11 @@ export default function Navigation() {
             onClick={() => setIsOpen(false)}
           >
             <div className="relative">
-              <div className="w-10 h-10 bg-gradient-to-br from-fixel-blue to-fixel-purple rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 will-change-transform group-hover:rotate-6">
-                <Code className="w-6 h-6 text-white" />
-              </div>
-              <div className="absolute -top-1 -right-1 w-4 h-4 bg-fixel-cyan rounded-full animate-pulse"></div>
-              <div className="absolute inset-0 bg-gradient-to-br from-fixel-blue to-fixel-purple rounded-xl blur-xl opacity-0 group-hover:opacity-30 transition-opacity duration-300 will-change-opacity"></div>
-            </div>
-            <div className="hidden sm:block">
-              <div className="text-xl font-bold bg-gradient-to-r from-fixel-blue to-fixel-purple bg-clip-text text-transparent group-hover:scale-105 transition-transform duration-300 will-change-transform">
-                Fixel
-              </div>
-              <div className="text-xs text-muted-foreground -mt-1 group-hover:text-fixel-blue transition-colors duration-300">
-                Technologies
-              </div>
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets%2F44b23d3b90f744f2b1903fefd63b4fe7%2Fee993aad4b50489fb072653b8f0afd25?format=webp&width=800"
+                alt="Fixel Technologies"
+                className="h-8 w-auto group-hover:scale-110 transition-transform duration-300 will-change-transform"
+              />
             </div>
           </Link>
 
