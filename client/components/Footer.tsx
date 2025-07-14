@@ -52,35 +52,6 @@ export default function Footer() {
                 scales with your ambitions.
               </p>
             </div>
-
-            {/* Contact CTAs */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-bounce-subtle delay-700">
-              <Button
-                asChild
-                size="lg"
-                className="bg-green-600 hover:bg-green-700 text-white font-medium shadow-lg hover:shadow-green-600/25 transition-all duration-300 hover:scale-105"
-              >
-                <a
-                  href="https://wa.me/1234567890?text=Hi%20Fixel%20Technologies,%20I%27d%20like%20to%20discuss%20a%20project."
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <MessageCircle className="w-5 h-5 mr-2" />
-                  WhatsApp
-                </a>
-              </Button>
-              <Button
-                asChild
-                variant="outline"
-                size="lg"
-                className="border-fixel-blue text-fixel-blue hover:bg-fixel-blue hover:text-white font-medium hover:scale-105 transition-all duration-300"
-              >
-                <a href="#contact">
-                  Schedule Call
-                  <ArrowRight className="w-5 h-5 ml-2" />
-                </a>
-              </Button>
-            </div>
           </div>
         </div>
 
