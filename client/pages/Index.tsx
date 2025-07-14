@@ -1004,7 +1004,7 @@ export default function Index() {
                     required
                   >
                     <SelectTrigger className="mt-2 hover:border-fixel-blue/50 focus:border-fixel-blue transition-colors duration-300">
-                      <SelectValue placeholder="Select a service" />
+                      <SelectValue placeholder="" />
                     </SelectTrigger>
                     <SelectContent>
                       {services.map((service) => (
