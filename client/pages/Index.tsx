@@ -913,7 +913,7 @@ export default function Index() {
                 </p>
               </CardHeader>
               <CardContent>
-                                                <div className="bg-white rounded-lg border overflow-hidden">
+                <div className="bg-white rounded-lg border overflow-hidden">
                   
                                                             <div
                                                                 className="calendly-inline-widget"
