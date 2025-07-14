@@ -777,17 +777,6 @@ export default function Index() {
                   "{featuredTestimonials[currentTestimonial]?.text}"
                 </blockquote>
                 <div className="flex items-center justify-center space-x-4 mb-6 animate-slide-in-left delay-200">
-                  <Avatar className="w-16 h-16 hover:scale-110 transition-transform duration-300 ring-2 ring-fixel-blue/20">
-                    <AvatarImage
-                      src={featuredTestimonials[currentTestimonial]?.avatar}
-                    />
-                    <AvatarFallback className="bg-fixel-blue text-white">
-                      {featuredTestimonials[currentTestimonial]?.name
-                        .split(" ")
-                        .map((n) => n[0])
-                        .join("")}
-                    </AvatarFallback>
-                  </Avatar>
                   <div className="text-left">
                     <div className="font-semibold text-lg">
                       {featuredTestimonials[currentTestimonial]?.name}
