@@ -43,14 +43,20 @@ export default function Footer() {
                 scales with your ambitions.
               </p>
             </div>
+<<<<<<< HEAD
           </div>
         </div>
+=======
+            </div>
+            </div>
+
+>>>>>>> 24d8d6e5783157d8e33bbcc4cc7d0f34682a90e9
 
         {/* Bottom Section */}
         <div className="py-6 border-t border-border animate-fade-in delay-1000">
           <div className="text-center">
             <div className="text-sm text-muted-foreground">
-              © 2024 Fixel Technologies. All rights reserved.
+              © 2025 Fixel Technologies. All rights reserved.
             </div>
           </div>
         </div>

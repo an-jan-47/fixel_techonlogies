@@ -70,10 +70,9 @@ const services = [
     color: "fixel-blue",
     features: [
       "React, Vue, Angular applications",
-      "Node.js, Python, PHP backends",
+      "Node.js, Supabase",
       "Progressive Web Apps (PWA)",
       "E-commerce platforms",
-      "Custom CMS solutions",
       "API development & integration",
     ],
     price: 5000,
@@ -87,11 +86,10 @@ const services = [
     color: "fixel-purple",
     features: [
       "React Native development",
-      "Native iOS (Swift) & Android (Kotlin)",
+      "Native iOS & Android",
       "Flutter applications",
       "App Store optimization",
       "Push notifications",
-      "Offline functionality",
     ],
     price: 8000,
     popular: true,
@@ -134,14 +132,20 @@ const services = [
 
 const stats = [
   { number: 10, label: "Projects Delivered", suffix: "+", icon: <Rocket /> },
+<<<<<<< HEAD
   { number: 6, label: "Happy Clients", suffix: "+", icon: <Users /> },
   { number: 100, label: "Success Rate", suffix: "%", icon: <Target /> },
+=======
+  { number: 8, label: "Happy Clients", suffix: "+", icon: <Users /> },
+  { number: 99.99, label: "Success Rate", suffix: "%", icon: <Target /> },
+>>>>>>> 24d8d6e5783157d8e33bbcc4cc7d0f34682a90e9
   { number: 24, label: "Support", suffix: "/7", icon: <Clock /> },
 ];
 
 const testimonials = [
   {
     id: 1,
+<<<<<<< HEAD
     name: "Harsh",
     role: "CEO",
     company: "GroceryHub",
@@ -149,11 +153,21 @@ const testimonials = [
     rating: 5,
     text: "Fixel Technologies transformed our entire e-commerce platform for wholesale grocery products. Their AI-powered recommendations and attention to detail exceeded our expectations. Our sales increased by 300% within the first quarter!",
     project: "E commerce Platform",
+=======
+    name: "HARSH",
+    role: "CEO",
+    company: "GroceryHub.",
+    avatar: "/placeholder.svg",
+    rating: 5,
+    text: "Fixel Technologies transformed our entire e-commerce platform. The team's expertise in sustainable tech solutions and their attention to detail exceeded our expectations.",
+    project: "E-Commerce Platform",
+>>>>>>> 24d8d6e5783157d8e33bbcc4cc7d0f34682a90e9
     category: "E-commerce",
     featured: true,
   },
   {
     id: 2,
+<<<<<<< HEAD
     name: "Shrikant",
     role: "CTO",
     company: "Medika Indica",
@@ -161,6 +175,15 @@ const testimonials = [
     rating: 5,
     text: "The mobile app they developed for us revolutionized medicine delivery. The 30-minute delivery system and intuitive UI design has made our users incredibly happy. 5k downloads and growing rapidly!",
     project: "Medika Indica Mobile App",
+=======
+    name: "SHRIKANT",
+    role: "CTO",
+    company: "MedikaIndica",
+    avatar: "/placeholder.svg",
+    rating: 5,
+    text: "The mobile app they developed for us has been a game-changer. The seamless integration of delivery services and the intuitive UI design has made our users incredibly happy.",
+    project: "Health Mobile App",
+>>>>>>> 24d8d6e5783157d8e33bbcc4cc7d0f34682a90e9
     category: "Mobile Development",
     featured: true,
   },
@@ -179,6 +202,7 @@ const testimonials = [
 const projects = [
   {
     id: 1,
+<<<<<<< HEAD
     title: "E commerce Platform",
     client: "GroceryHub",
     description:
@@ -186,21 +210,30 @@ const projects = [
     image:
       "https://cdn.builder.io/api/v1/image/assets%2F44b23d3b90f744f2b1903fefd63b4fe7%2F1423cc67d3c9493f8adcfc15377e70c4?format=webp&width=800",
     technologies: ["React", "Node.js", "PostgreSQL", "Stripe", "AWS"],
+=======
+    title: "E-Commerce Platform",
+    client: "GroceryHub",
+    description:
+      "A full-featured e-commerce platform for sustainable products with AI-powered recommendations.",
+    image: "/placeholder.svg",
+    technologies: ["React", "Node.js", "Supabase", "Razorpay"],
+>>>>>>> 24d8d6e5783157d8e33bbcc4cc7d0f34682a90e9
     results: {
       metric1: {
-        value: 300,
+        value: 70,
         label: "Increase in Sales",
         suffix: "%",
         decimals: 0,
       },
-      metric2: { value: 15, label: "Active Users", suffix: "k+", decimals: 0 },
+      metric2: { value: 10, label: "Active Users", suffix: "k+", decimals: 0 },
       metric3: { value: 99.9, label: "Uptime", suffix: "%", decimals: 1 },
     },
-    timeline: "4 Months",
+    timeline: "2 Months",
     year: "2024",
   },
   {
     id: 2,
+<<<<<<< HEAD
     title: "Medika Indica Mobile App",
     client: "Medika Indica",
     description:
@@ -210,16 +243,26 @@ const projects = [
     technologies: ["React Native", "Firebase", "Node.js", "MongoDB"],
     results: {
       metric1: { value: 5, label: "Downloads", suffix: "k", decimals: 0 },
+=======
+    title: "Health Mobile App",
+    client: "MedikaIndica",
+    description:
+      "Cross-platform mobile app for medicine delivery under 30 minutes",
+    image: "/placeholder.svg",
+    technologies: ["React Native", "Firebase", "Node.js", "Supabase"],
+    results: {
+      metric1: { value: 5, label: "Downloads", suffix: "k+", decimals: 0 },
+>>>>>>> 24d8d6e5783157d8e33bbcc4cc7d0f34682a90e9
       metric2: {
         value: 4.8,
-        label: "App Store Rating",
+        label: "Playstore Store Rating",
         suffix: "★",
         decimals: 1,
       },
       metric3: { value: 85, label: "User Retention", suffix: "%", decimals: 0 },
     },
     timeline: "6 Months",
-    year: "2024",
+    year: "2025",
   },
 ];
 

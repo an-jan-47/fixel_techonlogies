@@ -83,7 +83,6 @@ export default function FormField({
             e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
           ) => onChange(e.target.value)}
           onBlur={handleBlur}
-          placeholder={placeholder}
           rows={multiline ? rows : undefined}
           className={cn(
             "pr-10 transition-all duration-300",
