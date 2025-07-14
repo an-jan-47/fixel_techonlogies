@@ -154,9 +154,9 @@ const testimonials = [
   },
   {
     id: 2,
-    name: "Michael Chen",
+    name: "Shrikant",
     role: "CTO",
-    company: "WellnessTech",
+    company: "Medika Indica",
     avatar: "",
     rating: 5,
     text: "The mobile app they developed for us has been a game-changer. The seamless integration with wearable devices and the intuitive UI design has made our users incredibly happy. 50k+ downloads in just 3 months!",
