@@ -142,9 +142,9 @@ const stats = [
 const testimonials = [
   {
     id: 1,
-    name: "Sarah Johnson",
+    name: "Harsh",
     role: "CEO",
-    company: "GreenLife Co.",
+    company: "GroceryHub",
     avatar: "/placeholder.svg",
     rating: 5,
     text: "Fixel Technologies transformed our entire e-commerce platform. The team's expertise in wholesale grocery solutions and their attention to detail exceeded our expectations. Our sales increased by 300% within the first quarter!",
