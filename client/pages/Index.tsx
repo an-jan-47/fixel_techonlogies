@@ -958,7 +958,7 @@ export default function Index() {
                     value={formData.name}
                     onChange={(value) => handleInputChange("name", value)}
                     required
-                    placeholder="John Doe"
+                    placeholder=""
                     validation={validationRules.required("Full Name")}
                   />
                   <FormField
