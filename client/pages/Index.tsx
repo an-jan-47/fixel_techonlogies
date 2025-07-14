@@ -183,7 +183,8 @@ const projects = [
     client: "GroceryHub",
     description:
       "A full-featured e-commerce platform for wholesale grocery products with AI-powered recommendations.",
-    image: "",
+    image:
+      "https://cdn.builder.io/api/v1/image/assets%2F44b23d3b90f744f2b1903fefd63b4fe7%2F1423cc67d3c9493f8adcfc15377e70c4?format=webp&width=800",
     technologies: ["React", "Node.js", "PostgreSQL", "Stripe", "AWS"],
     results: {
       metric1: {
@@ -204,7 +205,8 @@ const projects = [
     client: "Medika Indica",
     description:
       "Cross-platform mobile app for medicine delivery in 30 minutes.",
-    image: "",
+    image:
+      "https://cdn.builder.io/api/v1/image/assets%2F44b23d3b90f744f2b1903fefd63b4fe7%2Ff85fe39c8a464f8b80473b01628ea062?format=webp&width=800",
     technologies: ["React Native", "Firebase", "Node.js", "MongoDB"],
     results: {
       metric1: { value: 5, label: "Downloads", suffix: "k", decimals: 0 },
@@ -431,7 +433,7 @@ export default function Index() {
               <span className="text-fixel-blue font-semibold bg-fixel-blue/10 px-2 py-1 rounded-lg">
                 Fixel Technologies
               </span>{" "}
-              — a cutting-edge tech company delivering digital transformation
+              ��� a cutting-edge tech company delivering digital transformation
               for startups, agencies, and enterprise clients worldwide.
             </p>
 
