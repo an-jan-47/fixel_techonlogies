@@ -260,7 +260,6 @@ export default function Index() {
     email: "",
     company: "",
     phone: "",
-    service: "",
     budget: "",
     timeline: "",
     message: "",
