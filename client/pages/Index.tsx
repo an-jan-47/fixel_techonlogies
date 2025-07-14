@@ -1029,7 +1029,7 @@ export default function Index() {
                   required
                   multiline
                   rows={5}
-                  placeholder="Tell us about your project, goals, and any specific requirements..."
+                  placeholder=""
                   validation={validationRules.minLength(10)}
                 />
 
