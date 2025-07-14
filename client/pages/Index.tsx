@@ -142,32 +142,34 @@ const stats = [
 const testimonials = [
   {
     id: 1,
-    name: "Harsh",
+        name: "Harsh",
     role: "CEO",
     company: "GroceryHub",
-    avatar: "",
+        avatar: "",
     rating: 5,
-    text: "Fixel Technologies transformed our entire e-commerce platform for wholesale grocery products. Their AI-powered recommendations and attention to detail exceeded our expectations. Our sales increased by 300% within the first quarter!",
+            text: "Fixel Technologies transformed our entire e-commerce platform for wholesale grocery products. Their AI-powered recommendations and attention to detail exceeded our expectations. Our sales increased by 300% within the first quarter!",
     project: "E commerce Platform",
     category: "E-commerce",
     featured: true,
   },
   {
     id: 2,
-    name: "Shrikant",
+        name: "Shrikant",
     role: "CTO",
     company: "Medika Indica",
-    avatar: "",
+        avatar: "",
     rating: 5,
-    text: "The mobile app they developed for us revolutionized medicine delivery. The 30-minute delivery system and intuitive UI design has made our users incredibly happy. 5k downloads and growing rapidly!",
+        text: "The mobile app they developed for us revolutionized medicine delivery. The 30-minute delivery system and intuitive UI design has made our users incredibly happy. 5k downloads and growing rapidly!",
     project: "Medika Indica Mobile App",
     category: "Mobile Development",
     featured: true,
   },
   {
+    
+    
     role: "Founder",
     company: "Capital Insights",
-    avatar: "",
+        avatar: "",
     rating: 5,
     text: "Working with Fixel was an absolute pleasure. They delivered our financial dashboard ahead of schedule and the real-time analytics capabilities have saved our team 60% of their time. Exceptional work!",
     project: "FinanceFlow Dashboard",
@@ -198,7 +200,7 @@ const projects = [
     timeline: "4 Months",
     year: "2024",
   },
-  {
+    {
     id: 2,
     title: "Medika Indica Mobile App",
     client: "Medika Indica",
@@ -272,13 +274,22 @@ export default function Index() {
 
   const featuredTestimonials = testimonials.filter((t) => t.featured);
 
-  useEffect(() => {
+    useEffect(() => {
     setMounted(true);
 
-    // Load Calendly script
-    const script = document.createElement("script");
-    script.src = "https://assets.calendly.com/assets/external/widget.js";
+        // Load Calendly script
+    const script = document.createElement('script');
+    script.src = 'https://assets.calendly.com/assets/external/widget.js';
     script.async = true;
+    script.onload = () => {
+      // Force re-render of Calendly widgets after script loads
+      if (window.Calendly) {
+        window.Calendly.initInlineWidget({
+          url: 'https://calendly.com/technologiesfixel/30min',
+          parentElement: document.querySelector('.calendly-inline-widget')
+        });
+      }
+    };
     document.head.appendChild(script);
 
     return () => {
@@ -519,6 +530,7 @@ export default function Index() {
                   <p className="text-muted-foreground mb-6">
                     {service.description}
                   </p>
+                  
                 </CardHeader>
                 <CardContent className="relative z-10">
                   <ul className="space-y-3 mb-6">
@@ -533,12 +545,12 @@ export default function Index() {
                       </li>
                     ))}
                   </ul>
-                  <Button
+                                    <Button
                     className="w-full bg-gradient-to-r from-fixel-blue to-fixel-purple hover:from-fixel-blue/80 hover:to-fixel-purple/80 text-white group/btn hover:scale-105 transition-all duration-300"
                     onClick={() => {
-                      const contactSection = document.getElementById("contact");
+                      const contactSection = document.getElementById('contact');
                       if (contactSection) {
-                        contactSection.scrollIntoView({ behavior: "smooth" });
+                        contactSection.scrollIntoView({ behavior: 'smooth' });
                       }
                     }}
                   >
@@ -572,7 +584,7 @@ export default function Index() {
               <span className="bg-gradient-to-r from-fixel-blue to-fixel-purple bg-clip-text text-transparent">
                 Excellence
               </span>{" "}
-              Since 2024
+                            Since 2024
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed animate-slide-in-right delay-300">
               We're a passionate team of developers, designers, and innovators
@@ -648,7 +660,7 @@ export default function Index() {
                 className="group hover:shadow-2xl hover:shadow-fixel-blue/10 transition-all duration-500 border-border/50 hover:border-fixel-blue/30 overflow-hidden hover:scale-105 animate-fade-in backdrop-blur-sm bg-gradient-to-br from-card/80 to-background/80"
                 style={{ animationDelay: `${500 + index * 300}ms` }}
               >
-                <div className="aspect-video bg-gradient-to-br from-fixel-blue/10 to-fixel-purple/10 flex items-center justify-center relative overflow-hidden">
+                <div className=" bg-gradient-to-br from-fixel-blue/10 to-fixel-purple/10 flex items-center justify-center relative overflow-hidden">
                   <div className="text-6xl text-fixel-blue/30 group-hover:scale-125 group-hover:rotate-12 transition-all duration-500">
                     <Globe />
                   </div>
@@ -790,6 +802,7 @@ export default function Index() {
                   "{featuredTestimonials[currentTestimonial]?.text}"
                 </blockquote>
                 <div className="flex items-center justify-center space-x-4 mb-6 animate-slide-in-left delay-200">
+                  
                   <div className="text-left">
                     <div className="font-semibold text-lg">
                       {featuredTestimonials[currentTestimonial]?.name}
@@ -900,20 +913,18 @@ export default function Index() {
                 </p>
               </CardHeader>
               <CardContent>
-                <div className="aspect-video bg-gradient-to-br from-fixel-blue/5 to-fixel-purple/5 rounded-lg flex items-center justify-center border-2 border-dashed border-fixel-blue/20 hover:border-fixel-blue/40 transition-colors duration-300 relative overflow-hidden">
-                  <div className="text-center animate-bounce-subtle z-10">
-                    <Calendar className="w-16 h-16 text-fixel-blue mx-auto mb-4" />
-                    <div
-                      id="calendly-widget"
-                      className="calendly-inline-widget"
-                      data-url="https://calendly.com/technologiesfixel/30min"
-                      style={{ minWidth: "320px", height: "630px" }}
+                                                <div className="bg-white rounded-lg border overflow-hidden">
+                  
+                                                            <div
+                                                                className="calendly-inline-widget"
+                    data-url="https://calendly.com/technologiesfixel/30min"
+                    style={{ minWidth: '320px', height: '700px', width: '100%' }}
                     ></div>
                     <Button
                       asChild
                       className="bg-gradient-to-r from-fixel-blue to-fixel-purple hover:from-fixel-blue/80 hover:to-fixel-purple/80 text-white font-semibold hover:scale-105 transition-all duration-300"
                     >
-                      <a
+                                            <a
                         href="https://calendly.com/technologiesfixel/30min"
                         target="_blank"
                         rel="noopener noreferrer"
@@ -931,7 +942,7 @@ export default function Index() {
                   </div>
                   <div className="absolute bottom-4 right-4 w-6 h-6 bg-fixel-purple/10 rounded-full flex items-center justify-center animate-float delay-1000">
                     <Clock className="w-3 h-3 text-fixel-purple" />
-                  </div>
+                                    </div>
                 </div>
               </CardContent>
             </Card>
@@ -963,7 +974,7 @@ export default function Index() {
                     value={formData.name}
                     onChange={(value) => handleInputChange("name", value)}
                     required
-                    placeholder=""
+                                        placeholder=""
                     validation={validationRules.required("Full Name")}
                   />
                   <FormField
@@ -973,7 +984,7 @@ export default function Index() {
                     value={formData.email}
                     onChange={(value) => handleInputChange("email", value)}
                     required
-                    placeholder=""
+                                        placeholder=""
                     validation={validationRules.email}
                   />
                 </div>
@@ -984,7 +995,7 @@ export default function Index() {
                     id="company"
                     value={formData.company}
                     onChange={(value) => handleInputChange("company", value)}
-                    placeholder=""
+                                        placeholder=""
                   />
                   <FormField
                     label="Phone Number"
@@ -992,7 +1003,7 @@ export default function Index() {
                     type="tel"
                     value={formData.phone}
                     onChange={(value) => handleInputChange("phone", value)}
-                    placeholder=""
+                                        placeholder=""
                     validation={validationRules.phone}
                   />
                 </div>
@@ -1008,17 +1019,16 @@ export default function Index() {
                     }
                     required
                   >
-                    <SelectTrigger
+                                                            <SelectTrigger
                       className="mt-2 hover:border-fixel-blue/50 focus:border-fixel-blue transition-colors duration-300"
-                      onClick={(e) => e.stopPropagation()}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        e.stopPropagation();
+                      }}
                     >
-                      <SelectValue placeholder="" />
+                                            <SelectValue placeholder="" />
                     </SelectTrigger>
-                    <SelectContent
-                      className="z-50"
-                      position="popper"
-                      sideOffset={4}
-                    >
+                                        <SelectContent className="z-50" position="popper" sideOffset={4}>
                       {services.map((service) => (
                         <SelectItem key={service.title} value={service.title}>
                           <div className="flex items-center space-x-2">
@@ -1041,7 +1051,7 @@ export default function Index() {
                   required
                   multiline
                   rows={5}
-                  placeholder=""
+                                    placeholder=""
                   validation={validationRules.minLength(10)}
                 />
 
@@ -1089,6 +1099,8 @@ export default function Index() {
                 </p>
               </div>
 
+              
+
               <Card className="p-6 bg-gradient-to-br from-fixel-blue/5 to-fixel-purple/5 hover:shadow-lg hover:scale-105 transition-all duration-300 backdrop-blur-sm">
                 <h4 className="font-bold text-lg mb-4 flex items-center">
                   <Award className="w-5 h-5 mr-2 text-fixel-purple" />
@@ -1103,7 +1115,7 @@ export default function Index() {
                     },
                     {
                       icon: <Shield className="w-5 h-5" />,
-                      text: "100% project success rate",
+                                            text: "100% project success rate",
                       color: "fixel-green",
                     },
                     {
@@ -1134,6 +1146,8 @@ export default function Index() {
                   ))}
                 </div>
               </Card>
+
+              
             </div>
           </div>
         </div>
