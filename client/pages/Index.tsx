@@ -165,8 +165,6 @@ const testimonials = [
     featured: true,
   },
   {
-    id: 3,
-
     role: "Founder",
     company: "Capital Insights",
     avatar: "",
