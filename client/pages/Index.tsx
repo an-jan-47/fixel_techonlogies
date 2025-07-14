@@ -913,46 +913,51 @@ export default function Index() {
           </div>
 
           {/* Enhanced Calendly Integration */}
-          <div className="max-w-4xl mx-auto mb-16 animate-fade-in delay-500">
-            <Card className="p-8 shadow-lg bg-gradient-to-br from-card to-background">
-              <CardHeader className="text-center">
-                <CardTitle className="text-2xl font-bold mb-4 flex items-center justify-center">
-                  <Calendar className="w-6 h-6 mr-3 text-fixel-blue" />
-                  Schedule a{" "}
-                  <span className="text-gradient-blue-purple ml-2">
-                    Free Consultation
+          <div className="max-w-4xl mx-auto mb-16 animate-fade-in delay-500 px-4 sm:px-6">
+            <Card className="p-4 sm:p-6 lg:p-8 shadow-lg bg-gradient-to-br from-card to-background">
+              <CardHeader className="text-center px-0 sm:px-6">
+                <CardTitle className="text-xl sm:text-2xl font-bold mb-4 flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-3">
+                  <Calendar className="w-6 h-6 text-fixel-blue flex-shrink-0" />
+                  <span className="text-center">
+                    Schedule a{" "}
+                    <span className="text-gradient-blue-purple">
+                      Free Consultation
+                    </span>
                   </span>
                 </CardTitle>
-                <p className="text-muted-foreground">
+                <p className="text-sm sm:text-base text-muted-foreground px-2 sm:px-0">
                   Book a 30-minute call with our team to discuss your project
                   requirements and get a personalized solution.
                 </p>
               </CardHeader>
-              <CardContent>
+              <CardContent className="px-0 sm:px-6">
                 <div className="bg-white rounded-lg border overflow-hidden">
                   <div
                     className="calendly-inline-widget w-full"
                     data-url="https://calendly.com/technologiesfixel/30min"
                     style={{
-                      minWidth: "320px",
-                      height: "600px",
+                      minWidth: "300px",
+                      height: window.innerWidth < 768 ? "500px" : "600px",
                       width: "100%",
                     }}
                   ></div>
-                  <Button
-                    asChild
-                    className="bg-gradient-to-r from-fixel-blue to-fixel-purple hover:from-fixel-blue/80 hover:to-fixel-purple/80 text-white font-semibold hover:scale-105 transition-all duration-300"
-                  >
-                    <a
-                      href="https://calendly.com/technologiesfixel/30min"
-                      target="_blank"
-                      rel="noopener noreferrer"
+                  <div className="p-4 sm:p-6">
+                    <Button
+                      asChild
+                      className="w-full sm:w-auto bg-gradient-to-r from-fixel-blue to-fixel-purple hover:from-fixel-blue/80 hover:to-fixel-purple/80 text-white font-semibold hover:scale-105 transition-all duration-300"
                     >
-                      <Calendar className="w-5 h-5 mr-2" />
-                      Open Calendly
-                      <ExternalLink className="w-4 h-4 ml-2" />
-                    </a>
-                  </Button>
+                      <a
+                        href="https://calendly.com/technologiesfixel/30min"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center justify-center gap-2"
+                      >
+                        <Calendar className="w-4 h-4 sm:w-5 sm:h-5" />
+                        Open Calendly
+                        <ExternalLink className="w-3 h-3 sm:w-4 sm:h-4" />
+                      </a>
+                    </Button>
+                  </div>
                 </div>
 
                 {/* Floating calendar icons */}
