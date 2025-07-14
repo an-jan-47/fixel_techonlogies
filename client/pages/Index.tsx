@@ -277,27 +277,23 @@ export default function Index() {
   useEffect(() => {
     setMounted(true);
 
-    // Load Calendly script
-    const script = document.createElement("script");
-    script.src = "https://assets.calendly.com/assets/external/widget.js";
-    script.async = true;
-    script.onload = () => {
-      // Force re-render of Calendly widgets after script loads
-      if ((window as any).Calendly) {
-        (window as any).Calendly.initInlineWidget({
-          url: "https://calendly.com/technologiesfixel/30min",
-          parentElement: document.querySelector(".calendly-inline-widget"),
-        });
-      }
-    };
-    document.head.appendChild(script);
-
-    return () => {
-      // Cleanup script on unmount
-      if (document.head.contains(script)) {
-        document.head.removeChild(script);
-      }
-    };
+    // Load Calendly script only if not already loaded
+    if (!document.querySelector('script[src*="calendly"]')) {
+      const script = document.createElement("script");
+      script.src = "https://assets.calendly.com/assets/external/widget.js";
+      script.async = true;
+      script.onload = () => {
+        // Initialize widget only in our specific container
+        const container = document.querySelector(".calendly-inline-widget");
+        if ((window as any).Calendly && container) {
+          (window as any).Calendly.initInlineWidget({
+            url: "https://calendly.com/technologiesfixel/30min",
+            parentElement: container,
+          });
+        }
+      };
+      document.head.appendChild(script);
+    }
   }, []);
 
   const nextTestimonial = () => {
