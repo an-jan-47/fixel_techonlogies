@@ -166,7 +166,7 @@ const testimonials = [
   },
   {
     id: 3,
-    name: "Emma Rodriguez",
+
     role: "Founder",
     company: "Capital Insights",
     avatar: "",
