@@ -940,9 +940,9 @@ export default function Index() {
                   <div className="absolute top-4 left-4 w-8 h-8 bg-fixel-blue/10 rounded-full flex items-center justify-center animate-float">
                     <Calendar className="w-4 h-4 text-fixel-blue" />
                   </div>
-                                                      <div className="absolute bottom-4 right-4 w-6 h-6 bg-fixel-purple/10 rounded-full flex items-center justify-center animate-float delay-1000">
+                  <div className="absolute bottom-4 right-4 w-6 h-6 bg-fixel-purple/10 rounded-full flex items-center justify-center animate-float delay-1000">
                     <Clock className="w-3 h-3 text-fixel-purple" />
-                  </div>
+                                    </div>
                 </div>
               </CardContent>
             </Card>
