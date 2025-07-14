@@ -202,14 +202,14 @@ const projects = [
   },
   {
     id: 2,
-    title: "HealthTrack Mobile App",
-    client: "WellnessTech",
+    title: "Medika Indica Mobile App",
+    client: "Medika Indica",
     description:
-      "Cross-platform mobile app for health monitoring with wearable integration.",
-    image: "/placeholder.svg",
+      "Cross-platform mobile app for medicine delivery in 30 minutes.",
+    image: "",
     technologies: ["React Native", "Firebase", "Node.js", "MongoDB"],
     results: {
-      metric1: { value: 50, label: "Downloads", suffix: "k+", decimals: 0 },
+      metric1: { value: 5, label: "Downloads", suffix: "k", decimals: 0 },
       metric2: {
         value: 4.8,
         label: "App Store Rating",
