@@ -968,7 +968,7 @@ export default function Index() {
                     value={formData.email}
                     onChange={(value) => handleInputChange("email", value)}
                     required
-                    placeholder="john@company.com"
+                    placeholder=""
                     validation={validationRules.email}
                   />
                 </div>
