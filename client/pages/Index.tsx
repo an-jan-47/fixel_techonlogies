@@ -1010,7 +1010,10 @@ export default function Index() {
                   >
                     <SelectTrigger
                       className="mt-2 hover:border-fixel-blue/50 focus:border-fixel-blue transition-colors duration-300"
-                      onClick={(e) => e.stopPropagation()}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        e.stopPropagation();
+                      }}
                     >
                       <SelectValue placeholder="" />
                     </SelectTrigger>
