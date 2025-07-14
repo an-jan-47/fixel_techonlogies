@@ -933,11 +933,10 @@ export default function Index() {
               <CardContent className="px-0 sm:px-6">
                 <div className="bg-white rounded-lg border overflow-hidden">
                   <div
-                    className="calendly-inline-widget w-full"
+                    className="calendly-inline-widget w-full h-[500px] sm:h-[600px]"
                     data-url="https://calendly.com/technologiesfixel/30min"
                     style={{
                       minWidth: "300px",
-                      height: window.innerWidth < 768 ? "500px" : "600px",
                       width: "100%",
                     }}
                   ></div>
