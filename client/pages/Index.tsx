@@ -181,11 +181,11 @@ const testimonials = [
 const projects = [
   {
     id: 1,
-    title: "EcoCommerce Platform",
-    client: "GreenLife Co.",
+    title: "E commerce Platform",
+    client: "GroceryHub",
     description:
-      "A full-featured e-commerce platform for sustainable products with AI-powered recommendations.",
-    image: "/placeholder.svg",
+      "A full-featured e-commerce platform for wholesale grocery products with AI-powered recommendations.",
+    image: "",
     technologies: ["React", "Node.js", "PostgreSQL", "Stripe", "AWS"],
     results: {
       metric1: {
