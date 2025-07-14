@@ -561,7 +561,7 @@ export default function Index() {
               <span className="bg-gradient-to-r from-fixel-blue to-fixel-purple bg-clip-text text-transparent">
                 Excellence
               </span>{" "}
-              Since 2019
+              Since 2024
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed animate-slide-in-right delay-300">
               We're a passionate team of developers, designers, and innovators
