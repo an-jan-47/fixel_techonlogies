@@ -935,7 +935,7 @@ export default function Index() {
                     data-url="https://calendly.com/technologiesfixel/30min"
                     style={{
                       minWidth: "100%",
-                      height: "700px",
+                      height: "600px",
                       width: "100%",
                     }}
                   ></div>
