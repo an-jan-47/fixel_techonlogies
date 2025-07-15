@@ -1086,27 +1086,23 @@ export default function Index() {
               </div>
 
               <Card className="p-6 hover:shadow-lg hover:scale-105 transition-all duration-300 hover:border-fixel-blue/30 backdrop-blur-sm bg-gradient-to-br from-card/80 to-background/80">
-                <h4 className="font-bold text-lg mb-4 flex items-center">
-                  <Building className="w-5 h-5 mr-2 text-fixel-blue" />
-                  San Francisco HQ
-                </h4>
                 <div className="space-y-3">
                   <div className="flex items-center space-x-3 group hover:translate-x-2 transition-transform duration-300">
                     <MapPin className="w-5 h-5 text-fixel-blue group-hover:scale-125 transition-transform duration-300" />
                     <span className="text-muted-foreground group-hover:text-foreground transition-colors duration-300">
-                      123 Tech Street, San Francisco, CA 94105
+                      A110,Dwarka,Delhi
                     </span>
                   </div>
                   <div className="flex items-center space-x-3 group hover:translate-x-2 transition-transform duration-300">
                     <Phone className="w-5 h-5 text-fixel-green group-hover:scale-125 transition-transform duration-300" />
                     <span className="text-muted-foreground group-hover:text-foreground transition-colors duration-300">
-                      +1 (555) 123-4567
+                      +91 8434668180
                     </span>
                   </div>
                   <div className="flex items-center space-x-3 group hover:translate-x-2 transition-transform duration-300">
                     <Clock className="w-5 h-5 text-fixel-orange group-hover:scale-125 transition-transform duration-300" />
                     <span className="text-muted-foreground group-hover:text-foreground transition-colors duration-300">
-                      Mon-Fri: 9 AM - 6 PM PST
+                      Mon-Sat: 9 AM - 6 PM PST
                     </span>
                   </div>
                 </div>
