@@ -911,10 +911,10 @@ export default function Index() {
           </div>
 
           {/* Enhanced Calendly Integration */}
-          <div className="max-w-4xl mx-auto mb-16 animate-fade-in delay-500 px-4 sm:px-6">
-            <Card className="p-4 sm:p-6 lg:p-8 shadow-lg hover:shadow-xl transition-all duration-500 backdrop-blur-sm bg-gradient-to-br from-card/80 to-background/80">
-              <CardHeader className="text-center px-2 sm:px-6">
-                <CardTitle className="text-xl sm:text-2xl font-bold mb-4 flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-3">
+          <div className="w-full max-w-5xl mx-auto mb-16 animate-fade-in delay-500 px-2 sm:px-4 lg:px-6">
+            <Card className="p-2 sm:p-4 lg:p-6 shadow-lg hover:shadow-xl transition-all duration-500 backdrop-blur-sm bg-gradient-to-br from-card/80 to-background/80">
+              <CardHeader className="text-center px-1 sm:px-4">
+                <CardTitle className="text-lg sm:text-xl lg:text-2xl font-bold mb-3 sm:mb-4 flex flex-col sm:flex-row items-center justify-center gap-2">
                   <Calendar className="w-5 h-5 sm:w-6 sm:h-6 text-fixel-blue flex-shrink-0" />
                   <span className="text-center leading-tight">
                     Schedule a{" "}
@@ -923,23 +923,23 @@ export default function Index() {
                     </span>
                   </span>
                 </CardTitle>
-                <p className="text-sm sm:text-base text-muted-foreground px-2 sm:px-0 leading-relaxed">
+                <p className="text-sm sm:text-base text-muted-foreground px-1 sm:px-0 leading-relaxed">
                   Book a 30-minute call with our team to discuss your project
                   requirements and get a personalized solution.
                 </p>
               </CardHeader>
-              <CardContent className="px-2 sm:px-6 relative">
-                <div className="bg-white rounded-lg border overflow-hidden">
+              <CardContent className="px-1 sm:px-4 relative">
+                <div className="bg-white rounded-lg border overflow-hidden w-full">
                   <div
                     className="calendly-inline-widget w-full"
                     data-url="https://calendly.com/technologiesfixel/30min"
                     style={{
-                      minWidth: "300px",
-                      height: "500px",
+                      minWidth: "100%",
+                      height: "700px",
                       width: "100%",
                     }}
                   ></div>
-                  <div className="p-4 sm:p-6">
+                  <div className="p-3 sm:p-4 lg:p-6">
                     <Button
                       asChild
                       className="w-full sm:w-auto bg-gradient-to-r from-fixel-blue to-fixel-purple hover:from-fixel-blue/80 hover:to-fixel-purple/80 text-white font-semibold hover:scale-105 transition-all duration-300 text-sm sm:text-base"
