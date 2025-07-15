@@ -969,7 +969,7 @@ export default function Index() {
             </Card>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+          <div className="w-full max-w-4xl mx-auto">
             <div className="animate-slide-in-left delay-700">
               <h3 className="text-2xl font-bold mb-6 flex items-center">
                 <Send className="w-6 h-6 mr-3 text-fixel-green" />
