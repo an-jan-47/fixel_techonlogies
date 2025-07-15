@@ -1069,6 +1069,94 @@ export default function Index() {
                 </ButtonLoading>
               </form>
             </div>
+<<<<<<< HEAD
+=======
+
+            <div className="space-y-8 animate-slide-in-right delay-700">
+              <div>
+                <h3 className="text-2xl font-bold mb-6 flex items-center">
+                  <MessageCircle className="w-6 h-6 mr-3 text-fixel-orange" />
+                  Let's{" "}
+                  <span className="text-gradient-orange-pink ml-2">
+                    connect
+                  </span>
+                </h3>
+                <p className="text-muted-foreground mb-8">
+                  We're here to help you succeed. Reach out and let's start
+                  building something amazing together.
+                </p>
+              </div>
+
+              <Card className="p-6 hover:shadow-lg hover:scale-105 transition-all duration-300 hover:border-fixel-blue/30 backdrop-blur-sm bg-gradient-to-br from-card/80 to-background/80">
+                <div className="space-y-3">
+                  <div className="flex items-center space-x-3 group hover:translate-x-2 transition-transform duration-300">
+                    <MapPin className="w-5 h-5 text-fixel-blue group-hover:scale-125 transition-transform duration-300" />
+                    <span className="text-muted-foreground group-hover:text-foreground transition-colors duration-300">
+                      A110,Dwarka,Delhi
+                    </span>
+                  </div>
+                  <div className="flex items-center space-x-3 group hover:translate-x-2 transition-transform duration-300">
+                    <Phone className="w-5 h-5 text-fixel-green group-hover:scale-125 transition-transform duration-300" />
+                    <span className="text-muted-foreground group-hover:text-foreground transition-colors duration-300">
+                      +91 8434668180
+                    </span>
+                  </div>
+                  <div className="flex items-center space-x-3 group hover:translate-x-2 transition-transform duration-300">
+                    <Clock className="w-5 h-5 text-fixel-orange group-hover:scale-125 transition-transform duration-300" />
+                    <span className="text-muted-foreground group-hover:text-foreground transition-colors duration-300">
+                      Mon-Sat: 9 AM - 6 PM PST
+                    </span>
+                  </div>
+                </div>
+              </Card>
+
+              <Card className="p-6 bg-gradient-to-br from-fixel-blue/5 to-fixel-purple/5 hover:shadow-lg hover:scale-105 transition-all duration-300 backdrop-blur-sm">
+                <h4 className="font-bold text-lg mb-4 flex items-center">
+                  <Award className="w-5 h-5 mr-2 text-fixel-purple" />
+                  Why Choose Fixel?
+                </h4>
+                <div className="space-y-4">
+                  {[
+                    {
+                      icon: <Zap className="w-5 h-5" />,
+                      text: "Lightning-fast response times",
+                      color: "fixel-blue",
+                    },
+                    {
+                      icon: <Shield className="w-5 h-5" />,
+                      text: "100% project success rate",
+                      color: "fixel-green",
+                    },
+                    {
+                      icon: <Users className="w-5 h-5" />,
+                      text: "Dedicated project manager",
+                      color: "fixel-purple",
+                    },
+                    {
+                      icon: <Heart className="w-5 h-5" />,
+                      text: "100% client satisfaction focus",
+                      color: "fixel-pink",
+                    },
+                  ].map((item, index) => (
+                    <div
+                      key={index}
+                      className="flex items-center space-x-3 group hover:translate-x-2 transition-transform duration-300 p-3 rounded-lg hover:bg-white/5"
+                      style={{ transitionDelay: `${index * 100}ms` }}
+                    >
+                      <div
+                        className={`text-${item.color} group-hover:scale-125 transition-transform duration-300`}
+                      >
+                        {item.icon}
+                      </div>
+                      <span className="text-muted-foreground group-hover:text-foreground transition-colors duration-300">
+                        {item.text}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              </Card>
+            </div>
+>>>>>>> 8f940ec238c104b262faeebab511e771049c1a6a
           </div>
         </div>
       </section>
